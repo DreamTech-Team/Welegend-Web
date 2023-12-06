@@ -1,4 +1,14 @@
 # Welegend-Web
+
+## Version:
+
+- NextJS: 14.0.3.
+- NodeJS: >= 18.17.0 (current run 18.16.1 is okay but **not reccommend**).
+
+## More information about routing in next:
+
+https://nextjs.org/docs/app/building-your-application/routing/colocation
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
