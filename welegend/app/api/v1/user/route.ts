@@ -1,4 +1,3 @@
-import multer from 'multer';
 import { RequestContext } from 'next/dist/server/next-server';
 import { NextRequest } from 'next/server';
 import APIRouter from '~/app/api/_externals/api.handler';
