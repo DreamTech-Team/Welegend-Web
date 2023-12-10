@@ -1,6 +1,6 @@
 // userSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import authStorage from '~/app/_external/_utils/auth.storage';
+import authStorage from '~/app/_externals/utils/auth.storage';
 
 export interface UserType {
   _id: string;

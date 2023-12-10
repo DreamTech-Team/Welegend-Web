@@ -1,4 +1,4 @@
-import { UserType } from '~/app/_external/_store/reducers/user.slice.example';
+import { UserType } from '~/app/_externals/store/reducers/user.slice.example';
 
 const authStorage = {
   login(profile: UserType, accessToken: string) {
