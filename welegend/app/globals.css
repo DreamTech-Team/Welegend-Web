@@ -37,11 +37,34 @@ body {
   box-sizing: border-box;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+code {
+  font-family: 'Montserrat', sans-serif;
 }
 
 button {
   height: auto !important;
+}
+
+.pick_banner-stories {
+  height: 120px;
+  width:140px;
+  
+  background: #f33;
+  
+  border-top-left-radius: 100%;
+  border-top-right-radius: 70% 100%;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 100% 70%;
+  
+  transform: rotate(30deg);
+  overflow: hidden;
+}
+
+.pick_banner-stories-image {
+  transform: rotate(-30deg);
 }
