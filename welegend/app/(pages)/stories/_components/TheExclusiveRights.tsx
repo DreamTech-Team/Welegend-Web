@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from 'next/image';
 
-import Right50by50 from '../../../_externals/assets/stories/ic_right_1.png';
-import IDCard from '../../../_externals/assets/stories/ic_right_2.png';
-import Star from '../../../_externals/assets/stories/ic_right_3.png';
+import Right50by50 from '../../../_externals/assets/stories/ic_right_1.svg';
+import IDCard from '../../../_externals/assets/stories/ic_right_2.svg';
+import Star from '../../../_externals/assets/stories/ic_right_3.svg';
 import RightRepresent from '../../../_externals/assets/stories/img_right.png';
 
 interface ExclusiveRight {
@@ -27,8 +27,8 @@ const exclusiveRightLists: ExclusiveRight[] = [
 ];
 export default function ExclusiveRights() {
   return (
-    <div className="flex flex-col items-center mt-[100px]">
-      <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
+    <div className="flex flex-col items-center mt-[40px] md:mt-[50] lg:mt-[60px] xl:mt-[80px] 2xl:mt-[80px]">
+      <h2 className="text-neutral-600 text-2xl font-extrabold mb-10 text-center w-4/5">
         3 Đặc Quyền Khi Đăng Ký Sớm Welegend
       </h2>
       <div className="flex justify-center items-center">
@@ -54,7 +54,7 @@ export default function ExclusiveRights() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center">
+        <div className="hidden justify-center items-center md:flex">
           <Image
             src={RightRepresent}
             alt="Right Represent"

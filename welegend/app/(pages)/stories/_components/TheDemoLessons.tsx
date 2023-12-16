@@ -51,11 +51,11 @@ export default function DemoLessons() {
       <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
         Học thử một số bài học
       </h2>
-      <div className="flex flex-row items-center">
+      <div className="flex flex-row flex-wrap items-center">
         {demoLessonLists.map((item: DemoLesson, index) => (
           <div
             key={index}
-            className="flex px-4 py-6 max-w-[419px] bg-white rounded-[40px] mx-4"
+            className="flex px-4 py-6 max-w-[419px] bg-white rounded-[40px] mx-4 mb-5"
           >
             <div className="pick_banner-stories mr-4">
               <Image
