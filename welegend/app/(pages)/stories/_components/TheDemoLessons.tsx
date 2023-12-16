@@ -51,7 +51,7 @@ export default function DemoLessons() {
       <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
         Học thử một số bài học
       </h2>
-      <div className="flex flex-row flex-wrap items-center">
+      <div className="flex flex-row flex-wrap justify-center items-center">
         {demoLessonLists.map((item: DemoLesson, index) => (
           <div
             key={index}

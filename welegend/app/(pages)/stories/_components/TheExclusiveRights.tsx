@@ -27,7 +27,7 @@ const exclusiveRightLists: ExclusiveRight[] = [
 ];
 export default function ExclusiveRights() {
   return (
-    <div className="flex flex-col items-center mt-[40px] md:mt-[50] lg:mt-[60px] xl:mt-[80px] 2xl:mt-[80px]">
+    <div className="flex flex-col items-center mt-[40px] md:mt-[50] lg:mt-[60px] xl:mt-[80px] 2xl:mt-[80px] px-5">
       <h2 className="text-neutral-600 text-2xl font-extrabold mb-10 text-center w-4/5">
         3 Đặc Quyền Khi Đăng Ký Sớm Welegend
       </h2>
@@ -36,7 +36,7 @@ export default function ExclusiveRights() {
           {exclusiveRightLists.map((item: ExclusiveRight, index) => (
             <div
               key={index}
-              className="flex items-center max-w-[405px] h-[100px] bg-white rounded-md shadow border-l-4 border-blue-400 px-6 py-6 mb-6"
+              className="flex items-center max-w-[405px] min-h-[100px] bg-white rounded-md shadow border-l-4 border-blue-400 px-6 py-6 mb-6"
             >
               <div className="mr-6 flex items-center justify-center w-[50px] h-[50px]">
                 <Image

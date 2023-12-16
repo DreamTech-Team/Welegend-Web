@@ -35,23 +35,27 @@ const criteriasList: Criteria[] = [
 
 export default function TheCriterias() {
   return (
-    <div className="w-full flex flex-col items-center mt-[94px]">
+    <div className="w-full flex flex-col items-center mt-[50px] md:mt-[60px] lg:mt-[94px] xl:mt-[94px] 2xl:mt-[94px]">
+      <h2 className="text-neutral-600 text-2xl font-extrabold mb-10 text-center w-4/5">
+        4 Điều Đặc Biệt Chúng Tôi Có Ở Welegend
+      </h2>
       <div className="w-full flex flex-wrap items-center justify-center">
         {criteriasList.map((item, index) => (
           <div
             key={index}
-            className="max-w-[234px] min-h-[277px] px-6 py-5 bg-white rounded-[10px] shadow mx-4 flex flex-col items-center"
+            className="lg:max-w-[234px] xl:max-w-[234px] 2xl:max-w-[234px] w-5/6 min-h-[277px] px-6 py-5 bg-white rounded-[10px] shadow mx-4 flex flex-col items-center mb-3"
           >
-            <div className="border-b border-stone-300 p-8">
+            <div className="border-b border-stone-300 p-8 w-4/6 md:w-4/6 lg:w-full xl:w-w-full 2xl:w-full">
               <Image
                 src={item.image}
                 height={80}
+                layout="responsive"
                 alt={item.title}
                 quality={100}
                 className="w-auto"
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-6 flex-1">
               <h4 className="text-center text-red-600 text-base font-semibold mb-3">
                 {item.title}
               </h4>
@@ -62,7 +66,7 @@ export default function TheCriterias() {
           </div>
         ))}
       </div>
-      <button className="w-[332px] py-3 bg-blue-400 rounded-[5px] border border-blue-400 mt-11 text-white text-xs font-semibold transition duration-300 hover:bg-sky-500 hover:text-white bg-gradient-to-r from-blue-500 to-purple-500 transform-gpu hover:-translate-y-1 hover:shadow-lg">
+      <button className="w-[332px] py-3 bg-blue-400 rounded-[5px] border border-blue-400 mt-6 text-white text-xs font-semibold transition duration-300 hover:bg-sky-500 hover:text-white bg-gradient-to-r from-blue-500 to-purple-500 transform-gpu hover:-translate-y-1 hover:shadow-lg">
         Đăng ký Combo 4 Sản phẩm
       </button>
     </div>

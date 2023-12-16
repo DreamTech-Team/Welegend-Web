@@ -43,22 +43,22 @@ export default function ModalDemoLesson({ closeModal }: ModalDemoLessonProps) {
           Your browser does not support HTML video.
         </video>
       </div>
-      <div className="px-[30px] py-6 bg-white rounded-[20px]">
-        <div className="flex w-full items-center justify-center mb-8">
+      <div className="w-full md:w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 py-6 bg-white rounded-[20px]">
+        <div className="flex w-full items-start justify-center mb-8 px-[2%] ">
           <Image
             src={IconQuestion}
             alt="Icon Question"
-            className="w-[25px] h-auto mr-4"
+            className="w-[25px] h-auto mr-[1%]"
           />
           <span className="text-center text-black text-lg font-semibold">
             Lạc Long Quân đem bao nhiêu người con lên rừng?
           </span>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 px-[2%] ">
           {listAnswers.map((item, index) => (
             <div
               key={index}
-              className="min-w-[283px] h-[50px] cursor-pointer bg-blue-300 rounded-[30px] flex items-center justify-center relative transition duration-500 ease-in-out hover:bg-blue-500"
+              className="w-full h-[50px] cursor-pointer bg-blue-300 rounded-[30px] flex items-center justify-center relative transition duration-500 ease-in-out hover:bg-blue-500"
             >
               <div className="w-10 h-10 bg-white rounded-full absolute left-2 flex items-center justify-center">
                 <span className="text-center text-black text-xl font-bold">

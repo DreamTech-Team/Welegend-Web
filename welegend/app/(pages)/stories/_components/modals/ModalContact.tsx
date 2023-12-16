@@ -13,15 +13,15 @@ export default function ModalContact({
   nameParrent,
 }: ModalContactProps) {
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
-      <div className="px-11 py-9 w-1/2 flex items-center justify-between bg-white rounded-lg border-t-8 border-blue-400 relative">
+    <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center px-4">
+      <div className="px-7 py-9 w-max md:w-max lg:w-max xl:w-1/2 2xl:w-1/2 flex items-center justify-between bg-white rounded-lg border-t-8 border-blue-400 relative">
         <button
           onClick={closeModal}
           className="absolute right-[14px] top-[20px]"
         >
           <FontAwesomeIcon icon={faClose} size="2x" color="#4E4C50" />
         </button>
-        <div className="mr-5 flex-[2]">
+        <div className="mr-5 flex-[2] hidden md:hidden lg:hidden xl:block 2xl:block">
           <Image
             src={Logo}
             width={250}

@@ -50,11 +50,11 @@ export default function ProductSets() {
       <h1 className="mt-[40px] md:mt-[55px] lg:mt-[64px] xl:mt-[64px] 2xl:mt-[64px] text-neutral-600 text-[20px] md:text-[33px] lg:text-[33px] xl:text-[33px] 2xl:text-[33px] font-extrabold leading-[25px] text-center">
         Bộ Sản Phẩm Học Tập Của Welegend
       </h1>
-      <div className="mt-[20px] md:mt-[40px] lg:mt-[50px] xl:mt-[50px] 2xl:mt-[50px] flex flex-row flex-wrap justify-center py-3">
+      <div className="mt-[20px] md:mt-[40px] lg:mt-[50px] xl:mt-[50px] 2xl:mt-[50px] flex flex-row flex-wrap justify-center py-3 px-6">
         {productSetLists.map((item: ProductSet, index) => (
           <div
             key={index}
-            className="relative mx-3 mb-5 py-3 min-w-[192px] px-12 h-[123px] flex flex-col items-center justify-betwee rounded-[10px] group cursor-pointer"
+            className="relative mx-3 mb-5 py-3 min-w-full ssm:min-w-[192px] sm:min-w-[192px] md:min-w-[192px] lg:min-w-[192px] xl:min-w-[192px] 2xl:min-w-[192px] px-12 h-[123px] flex flex-col items-center justify-between rounded-[10px] group cursor-pointer"
             style={{ backgroundColor: item.color }}
           >
             <Image

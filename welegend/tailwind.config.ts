@@ -39,6 +39,9 @@ const config: Config = {
         '9': '9',
         '999': '999',
       },
+      screens: {
+        'ssm': '450px',
+      }
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
