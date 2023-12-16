@@ -38,7 +38,7 @@ export default function ModalContact({
           <input
             placeholder="Họ tên"
             type="text"
-            value={nameParrent}
+            defaultValue={nameParrent}
             className="w-full h-11 bg-white rounded-[7px] border border-stone-300 text-sm font-medium outline-none px-4 mb-4"
           />
           <input
