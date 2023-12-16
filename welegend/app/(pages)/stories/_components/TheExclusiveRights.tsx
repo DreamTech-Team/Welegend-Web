@@ -54,7 +54,7 @@ export default function ExclusiveRights() {
             </div>
           ))}
         </div>
-        <div className="hidden justify-center items-center md:flex">
+        <div className="hidden md:flex lg:flex xl:flex 2xl:flex justify-center items-center">
           <Image
             src={RightRepresent}
             alt="Right Represent"
