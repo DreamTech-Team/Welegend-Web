@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -73,4 +74,15 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.logo_text{
+  font-family: 'Nerko One', cursive;
+}
+
+.logo_text_gradient{
+  background: linear-gradient(179deg, #FFFBFC -153.28%, rgba(227, 96, 151, 0.90) 32.77%, rgba(255, 4, 215, 0.48) 177.47%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
