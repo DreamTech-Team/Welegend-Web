@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from 'next/image';
 
-import Right50by50 from '../../../_externals/assets/stories/ic_right_1.svg';
-import IDCard from '../../../_externals/assets/stories/ic_right_2.svg';
-import Star from '../../../_externals/assets/stories/ic_right_3.svg';
-import RightRepresent from '../../../_externals/assets/stories/img_right.png';
+import Right50by50 from '~/app/../app/_externals/assets/stories/ic_right_1.svg';
+import IDCard from '~/app/../app/_externals/assets/stories/ic_right_2.svg';
+import Star from '~/app/../app/_externals/assets/stories/ic_right_3.svg';
+import RightRepresent from '~/app/../app/_externals/assets/stories/img_right.png';
 
 interface ExclusiveRight {
   image: StaticImageData;

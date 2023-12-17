@@ -54,7 +54,7 @@ button {
   height: 120px;
   width:140px;
   
-  background: #f33;
+  background: #383737;
   
   border-top-left-radius: 100%;
   border-top-right-radius: 70% 100%;
@@ -67,4 +67,10 @@ button {
 
 .pick_banner-stories-image {
   transform: rotate(-30deg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

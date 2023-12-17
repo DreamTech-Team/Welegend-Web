@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import Kids from '../../../_externals/assets/stories/img_less.png';
+import Kids from '~/app/../app/_externals/assets/stories/img_less.png';
 import ModalDemoLesson from './modals/ModalDemoLesson';
 
 interface DemoLesson {
@@ -62,9 +62,7 @@ export default function DemoLessons() {
                 src={item.image}
                 alt={item.title}
                 className="w-full pick_banner-stories-image"
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
+                fill
               />
             </div>
             <div className="flex flex-col justify-between">

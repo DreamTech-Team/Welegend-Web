@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import Logo from '../..//../_externals/assets/stories/img_logo.svg';
-import BackgroundContact from '../../../_externals/assets/stories/img_bg_contact.svg';
+import Logo from '~/app/../app/_externals/assets/stories/img_logo.svg';
+import BackgroundContact from '~/app/../app/_externals/assets/stories/img_bg_contact.svg';
 import ModalContact from './modals/ModalContact';
 
 export default function ContactSession() {

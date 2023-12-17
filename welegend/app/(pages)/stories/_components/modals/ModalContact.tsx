@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Logo from '../..//../../_externals/assets/stories/img_logo.svg';
+import Logo from '~/app/../app/_externals/assets/stories/img_logo.svg';
 
 interface ModalContactProps {
   closeModal: () => void;

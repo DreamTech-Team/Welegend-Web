@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from 'next/image';
-import Profiles from '../../../_externals/assets/stories/ic_user_profile.svg';
-import NoWifi from '../../../_externals/assets/stories/ic_no_wifi.svg';
-import Syncro from '../../../_externals/assets/stories/ic_syncro.svg';
-import Devices from '../../../_externals/assets/stories/ic_devices.svg';
+import Profiles from '~/app/../app/_externals/assets/stories/ic_user_profile.svg';
+import NoWifi from '~/app/../app/_externals/assets/stories/ic_no_wifi.svg';
+import Syncro from '~/app/../app/_externals/assets/stories/ic_syncro.svg';
+import Devices from '~/app/../app/_externals/assets/stories/ic_devices.svg';
 
 interface Criteria {
   image: StaticImageData;
@@ -49,7 +49,7 @@ export default function TheCriterias() {
               <Image
                 src={item.image}
                 height={80}
-                layout="responsive"
+                width={120}
                 alt={item.title}
                 quality={100}
                 className="w-auto"

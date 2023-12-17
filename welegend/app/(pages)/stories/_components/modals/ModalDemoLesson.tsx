@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import IconQuestion from '../../../../_externals/assets/stories/ic_question.png';
+import IconQuestion from '~/app/../app/_externals/assets/stories/ic_question.png';
 
 interface ModalDemoLessonProps {
   closeModal: () => void;

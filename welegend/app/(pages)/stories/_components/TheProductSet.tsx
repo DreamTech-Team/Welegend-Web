@@ -1,10 +1,10 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Image, { StaticImageData } from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Brain from '../../../_externals/assets/stories/ic_brain.svg';
-import Knowledge from '../../../_externals/assets/stories/ic_knowledge.svg';
-import Listen from '../../../_externals/assets/stories/ic_listen.svg';
-import Read from '../../../_externals/assets/stories/ic_read.svg';
+import Brain from '~/app/../app/_externals/assets/stories/ic_brain.svg';
+import Knowledge from '~/app/../app/_externals/assets/stories/ic_knowledge.svg';
+import Listen from '~/app/../app/_externals/assets/stories/ic_listen.svg';
+import Read from '~/app/../app/_externals/assets/stories/ic_read.svg';
 
 interface ProductSet {
   name: string;

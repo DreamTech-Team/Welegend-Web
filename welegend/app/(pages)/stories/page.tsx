@@ -1,6 +1,6 @@
 'use client';
 
-import MainBackground from '../../_externals/assets/stories/StoryBackground.png';
+import MainBackground from '~/app/../app/_externals/assets/stories/StoryBackground.png';
 import BannerHeader from './_components/TheBanner';
 import ProductSets from './_components/TheProductSet';
 import DemoLessons from './_components/TheDemoLessons';

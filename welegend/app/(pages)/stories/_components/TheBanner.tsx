@@ -1,4 +1,4 @@
-import StoryBanner from '../../../_externals/assets/stories/banner_story.png';
+import StoryBanner from '~/app/../app/_externals/assets/stories/banner_story.png';
 
 export default function BannerHeader() {
   return (
