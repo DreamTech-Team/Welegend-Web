@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -43,7 +44,7 @@ body {
 } */
 
 code {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -52,15 +53,15 @@ button {
 
 .pick_banner-stories {
   height: 120px;
-  width:140px;
-  
+  width: 140px;
+
   background: #383737;
-  
+
   border-top-left-radius: 100%;
   border-top-right-radius: 70% 100%;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 100% 70%;
-  
+
   transform: rotate(30deg);
   overflow: hidden;
 }
@@ -73,4 +74,48 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.logo_text {
+  font-family: "Nerko One", cursive;
+}
+
+.logo_text_gradient {
+  background: linear-gradient(
+    179deg,
+    #fffbfc -153.28%,
+    rgba(227, 96, 151, 0.9) 32.77%,
+    rgba(255, 4, 215, 0.48) 177.47%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleSearchBarBanner {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.expanding-width {
+  animation: scaleSearchBarBanner 0.3s ease;
+}
+
+.slide-from-left {
+  animation: slideFromLeft 0.5s ease forwards;
 }
