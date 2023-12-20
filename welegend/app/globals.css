@@ -43,7 +43,7 @@ body {
 } */
 
 code {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -52,16 +52,31 @@ button {
 
 .pick_banner-stories {
   height: 120px;
-  width:140px;
-  
+  width: 140px;
+
   background: #383737;
-  
+
   border-top-left-radius: 100%;
   border-top-right-radius: 70% 100%;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 100% 70%;
-  
+
   transform: rotate(30deg);
+  overflow: hidden;
+}
+
+.pic-stories {
+  height: 200px;
+  width: 140px;
+
+  background: #383737;
+
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10% 10%;
+  border-bottom-right-radius: 70% 10%;
+  border-bottom-left-radius: 10% 10%;
+
+  transform: rotate(0deg);
   overflow: hidden;
 }
 
