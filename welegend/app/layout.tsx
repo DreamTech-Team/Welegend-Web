@@ -12,6 +12,8 @@ import StyledComponentsRegistry from '~/app/_externals/lib/AntdRegistry';
 import theme from '~/app/_externals/constants/theme.constant';
 
 import cn from '~/app/_externals/utils/classes.merge';
+import Navbar from './_externals/components/Navbar';
+import Footer from './_externals/components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,14 +24,11 @@ export const metadata = {
 
 const RootLayout = ({ children }: React.PropsWithChildren) => (
   <html lang="en">
-    <body
-      className={cn(
-        inter.className,
-        'min-h-screen w-full mx-auto'
-      )}
-    >
+    <body className={cn(inter.className, 'min-h-screen w-full mx-auto')}>
       <StyledComponentsRegistry>
+        <Navbar />
         <ConfigProvider theme={theme}>{children}</ConfigProvider>
+        <Footer />
       </StyledComponentsRegistry>
     </body>
   </html>
