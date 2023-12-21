@@ -36,7 +36,7 @@ const Motto = () => {
       <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
         Phương châm - Sứ mệnh
       </h2>
-      <div className="w-[90%] h-[400px] flex justify-center items-center relative p-6 bg-white">
+      <div className="w-[90%] h-[400px] flex justify-center items-center relative p-6 bg-white border-dashed border-2 border-gray-200 rounded-xl">
         <div className="flex-none w-[25%] h-full p-3 flex justify-center">
           <Image
             src={MottoImg}
@@ -45,7 +45,7 @@ const Motto = () => {
             style={{ width: '100%', height: 'auto' }}
           />
         </div>
-        <div className="grow h-full bg-white p-1 flex  ">
+        <div className="grow h-full bg-white p-1 flex ">
           <Swiper
             modules={[Virtual, Autoplay]}
             spaceBetween={50}

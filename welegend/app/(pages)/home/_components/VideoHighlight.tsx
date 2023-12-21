@@ -1,11 +1,5 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import img1 from '../../../_externals/assets/home/child.jpg';
-import img2 from '../../../_externals/assets/home/boys.jpg';
-import img3 from '../../../_externals/assets/home/children1.jpeg';
-import img4 from '../../../_externals/assets/home/hands.jpg';
-
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -79,10 +73,10 @@ const videoList: VideoHighlightList[] = [
 const VideoHighlight = () => {
   return (
     <div
-      className=" flex flex-col items-center relative mt-12"
+      className=" flex flex-col items-center relative mt-12 mb-12"
       style={{
         maxWidth: '100%',
-        padding: '2.2rem 1rem',
+        padding: '0 1rem',
         height: '100%',
       }}
     >

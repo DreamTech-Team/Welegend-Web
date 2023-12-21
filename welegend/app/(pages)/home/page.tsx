@@ -4,6 +4,10 @@ import MainBackground from '~/app/../app/_externals/assets/stories/StoryBackgrou
 import Slider from './_components/Slider';
 import VideoHighlight from './_components/VideoHighlight';
 import Motto from './_components/Motto';
+import ProminentBlog from './_components/ProminentBlog';
+import BuildLifeSkill from './_components/BuildLifeSkill';
+import ChoiceWelegnd from './_components/ChoiceWelegnd';
+import RatingCustomers from './_components/RatingCustomers';
 
 export default function HomePage() {
   return (
@@ -18,6 +22,10 @@ export default function HomePage() {
         <ProminentStory />
         <Motto />
         <VideoHighlight />
+        <ProminentBlog />
+        <BuildLifeSkill />
+        <ChoiceWelegnd />
+        <RatingCustomers />
       </div>
     </div>
   );

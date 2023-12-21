@@ -87,7 +87,7 @@ export default function Slider({
         <div className="flex w-4/5 p-5">
           <div
             key={curr}
-            className="flex flex-col p-5 justify-center animate-fade-left animate-delay-300 animate-ease-out "
+            className="flex flex-col p-5 justify-center animate-fade-left animate-delay-200 animate-ease-out animate-alternate"
           >
             <p className="text-neutral-600 font-extrabold text-xl pb-2.5">
               {slides[curr].content.title}
@@ -95,7 +95,7 @@ export default function Slider({
             <p className="text-neutral-600 font-extrabold text-5xl pt-2.5">
               {slides[curr].content.subtitle}
             </p>
-            <p className="text-neutral-600 font-extralight  text-2xl pt-5">
+            <p className="text-neutral-600 font-extralight text-2xl pt-5">
               {slides[curr].content.description}
             </p>
           </div>
