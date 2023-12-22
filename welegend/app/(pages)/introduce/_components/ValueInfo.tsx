@@ -1,7 +1,7 @@
 import { faHandsHoldingChild } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export function ItemInfo() {
+export function ValueInfo() {
   return (
     <div className="md:w-[45%] my-5">
       <div className="">

@@ -52,15 +52,15 @@ button {
 
 .pick_banner-stories {
   height: 120px;
-  width:140px;
-  
+  width: 140px;
+
   background: #383737;
-  
+
   border-top-left-radius: 100%;
   border-top-right-radius: 70% 100%;
   border-bottom-right-radius: 40px;
   border-bottom-left-radius: 100% 70%;
-  
+
   transform: rotate(30deg);
   overflow: hidden;
 }

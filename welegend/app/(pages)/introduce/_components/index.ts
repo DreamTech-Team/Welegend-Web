@@ -1,3 +1,4 @@
 export * from './BannerHeader';
 export * from './Thanks';
-export * from './ProjectInfo';
+export * from './ValueCompany';
+export * from './TruthStory';
