@@ -40,8 +40,24 @@ const config: Config = {
         '999': '999',
       },
       screens: {
-        'ssm': '450px',
-      }
+        ssm: '450px',
+      },
+      animation: {
+        undulate: 'float 6s ease-in-out infinite',
+        ripple1: 'move 12s linear infinite',
+        ripple2: 'move 8s linear infinite',
+        ripple3: 'move 12s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        move: {
+          '0%': { backgroundPosition: 'left 0px bottom 0' },
+          '100%': { backgroundPosition: 'left 350px bottom 0' },
+        },
+      },
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
