@@ -114,7 +114,7 @@ const VideoHighlight = () => {
           }}
         >
           {videoList.map((video, index) => (
-            <div key={`video_${index}`} className="rounded-[10px] ">
+            <div key={index} className="rounded-[10px] ">
               <SwiperSlide
                 style={{
                   width: '30%',
