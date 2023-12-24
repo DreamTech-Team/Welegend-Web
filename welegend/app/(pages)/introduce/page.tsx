@@ -1,7 +1,13 @@
 'use client';
 
 import { background_image } from '~/app/_externals/assets/introduce';
-import { BannerHeader, ProjectInfo, Thanks } from './_components';
+import {
+  BannerHeader,
+  Lectures,
+  Thanks,
+  TruthStory,
+  ValueCompany,
+} from './_components';
 
 export default function IntroducePage() {
   return (
@@ -14,7 +20,9 @@ export default function IntroducePage() {
         }}
       >
         <Thanks />
-        <ProjectInfo />
+        <TruthStory />
+        <Lectures />
+        <ValueCompany />
       </div>
     </div>
   );
