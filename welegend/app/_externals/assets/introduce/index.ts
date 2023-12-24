@@ -8,6 +8,7 @@ import childrenbg_image from './childrenbg.webp';
 import children_image from './children_st.png';
 import story_bg from './story_bg.webp';
 import story_img from './story_img1.webp';
+import profile_image from './profile_image.jpg';
 
 export {
   banner_intro,
@@ -20,4 +21,5 @@ export {
   children_image,
   story_bg,
   story_img,
+  profile_image,
 };
