@@ -66,6 +66,21 @@ button {
   overflow: hidden;
 }
 
+.pic-stories {
+  height: 200px;
+  width: 140px;
+
+  background: #383737;
+
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10% 10%;
+  border-bottom-right-radius: 70% 10%;
+  border-bottom-left-radius: 10% 10%;
+
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+
 .pick_banner-stories-image {
   transform: rotate(-30deg);
   width: 100%;
@@ -76,46 +91,3 @@ button {
   left: 0;
 }
 
-.logo_text {
-  font-family: "Nerko One", cursive;
-}
-
-.logo_text_gradient {
-  background: linear-gradient(
-    179deg,
-    #fffbfc -153.28%,
-    rgba(227, 96, 151, 0.9) 32.77%,
-    rgba(255, 4, 215, 0.48) 177.47%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes slideFromLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes scaleSearchBarBanner {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 50%;
-  }
-}
-
-.expanding-width {
-  animation: scaleSearchBarBanner 0.3s ease;
-}
-
-.slide-from-left {
-  animation: slideFromLeft 0.5s ease forwards;
-}
