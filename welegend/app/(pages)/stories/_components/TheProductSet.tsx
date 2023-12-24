@@ -54,7 +54,7 @@ export default function ProductSets() {
         {productSetLists.map((item: ProductSet, index) => (
           <div
             key={index}
-            className="relative mx-3 mb-5 py-3 min-w-full ssm:min-w-[192px] sm:min-w-[192px] md:min-w-[192px] lg:min-w-[192px] xl:min-w-[192px] 2xl:min-w-[192px] px-12 h-[123px] flex flex-col items-center justify-between rounded-[10px] group cursor-pointer"
+            className="relative mx-3 mb-5 py-3 min-w-full ssm:min-w-[192px] sm:min-w-[192px] md:min-w-[192px] lg:min-w-[192px] xl:min-w-[192px] 2xl:min-w-[192px] px-12 h-[130px] flex flex-col items-center justify-between rounded-[10px] group cursor-pointer"
             style={{ backgroundColor: item.color }}
           >
             <Image
@@ -64,14 +64,14 @@ export default function ProductSets() {
               alt={item.name}
               className="mb-4 mt-1"
             />
-            <span className="text-center text-neutral-800 text-sm font-semibold">
+            <span className="text-center text-neutral-800 text-base font-semibold">
               {item.name}
             </span>
-            <div className="absolute inset-0 bg-white rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 py-[15px] px-[18px] ">
+            <div className="absolute inset-0 bg-white rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 py-[18px] px-[18px] ">
               <h4 className="text-left text-zinc-600 text-sm font-bold mb-2">
                 {item.name}
               </h4>
-              <span className="text-neutral-800 text-[13px] font-light">
+              <span className="text-neutral-800 text-[14px] font-light pb-2">
                 {item.description}
               </span>
             </div>
@@ -79,12 +79,12 @@ export default function ProductSets() {
         ))}
       </div>
       <div className="w-full flex items-center justify-center flex-wrap">
-        <button className="px-3 py-3 min-w-[226px] mx-3 mb-3 bg-blue-400 rounded-[5px] border border-blue-400 text-white text-xs font-semibold transition duration-300 hover:bg-sky-500 hover:text-white bg-gradient-to-r from-blue-500 to-purple-500 transform-gpu hover:-translate-y-1 hover:shadow-lg">
+        <button className="px-3 py-3 min-w-[226px] mx-3 mb-3 bg-blue-400 rounded-[5px] border border-blue-400 text-white text-[13px] font-semibold transition duration-300 hover:bg-sky-500 hover:text-white bg-gradient-to-r from-blue-500 to-purple-500 transform-gpu hover:-translate-y-1 hover:shadow-lg">
           Đăng ký Combo 4 Sản phẩm
           <FontAwesomeIcon icon={faChevronRight} className="ml-4" />
         </button>
 
-        <button className="px-3 py-3 min-w-[226px] mx-3 mb-3 bg-white rounded-[5px] border border-blue-400 text-blue-400 text-xs font-semibold transition duration-300 hover:bg-blue-400 hover:text-white">
+        <button className="px-3 py-3 min-w-[226px] mx-3 mb-3 bg-white rounded-[5px] border border-blue-400 text-blue-400 text-[13px] font-semibold transition duration-300 hover:bg-blue-400 hover:text-white">
           Nhận tư vấn
         </button>
       </div>
