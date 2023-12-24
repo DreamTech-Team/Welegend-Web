@@ -9,7 +9,7 @@ import {
   faQuoteRight,
   faR,
 } from '@fortawesome/free-solid-svg-icons';
-import MottoImg from '../../../_externals/assets/home/motto.jpg';
+// import MottoImg from '../../../_externals/assets/home/motto.jpg';
 import MottoPeopleImg from '../../../_externals/assets/home/people.jpg';
 
 const quotes = [
