@@ -9,14 +9,14 @@ const APIHandler = new APIRouter();
 const router = APIHandler.route();
 
 // example get api
-router.get(async (req) => {
-  const data = await prisma.blog.findMany()
+// router.get(async (req) => {
+//   const data = await prisma.blog.findMany();
 
-  return Response.json({
-    message: 'Hello World!',
-    data
-  });
-});
+//   return Response.json({
+//     message: 'Hello World!',
+//     data,
+//   });
+// });
 
 // example upload file
 router.post(async (req) => {
