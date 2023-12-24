@@ -39,7 +39,7 @@ const Motto = () => {
       <div className="w-[90%] h-[400px] flex justify-center items-center relative p-6 bg-white border-dashed border-2 border-gray-200 rounded-xl">
         <div className="flex-none w-[25%] h-full p-3 flex justify-center">
           <Image
-            src={MottoImg}
+            src={MottoPeopleImg}
             alt="Ảnh team"
             className="flex justify-center items-center rounded-md"
             style={{ width: '100%', height: 'auto' }}
