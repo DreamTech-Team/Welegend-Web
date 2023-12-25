@@ -7,6 +7,7 @@ import {
   faBars,
 } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpenFind, setOpenFind] = useState(false);
@@ -15,6 +16,8 @@ export default function Navbar() {
   const [indexActive, setIndexActive] = useState(0);
 
   const divRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
 
   const handleClickOutside = (event: MouseEvent) => {
     if (divRef.current && !divRef.current.contains(event.target as Node)) {
@@ -91,7 +94,10 @@ export default function Navbar() {
           ) : (
             <>
               <button
-                onClick={() => setActiveIndex(0)}
+                onClick={() => {
+                  setActiveIndex(0);
+                  router.push('/home');
+                }}
                 className="mr-[3.5%] hover:text-sky-600"
                 style={{
                   color: indexActive == 0 ? '#078FD2' : '#000',
@@ -109,7 +115,10 @@ export default function Navbar() {
                 Sản phẩm khác
               </button>
               <button
-                onClick={() => setActiveIndex(2)}
+                onClick={() => {
+                  setActiveIndex(2);
+                  router.push('/introduce');
+                }}
                 className="mr-[3.5%] hover:text-sky-600"
                 style={{
                   color: indexActive == 2 ? '#078FD2' : '#000',
@@ -118,7 +127,10 @@ export default function Navbar() {
                 Giới thiệu
               </button>
               <button
-                onClick={() => setActiveIndex(3)}
+                onClick={() => {
+                  setActiveIndex(3);
+                  router.push('/stories');
+                }}
                 className="mr-[3%] hover:text-sky-600"
                 style={{
                   color: indexActive == 3 ? '#078FD2' : '#000',
