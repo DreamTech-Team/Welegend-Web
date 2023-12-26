@@ -11,7 +11,7 @@ import RatingCustomers from './_components/RatingCustomers';
 
 export default function HomePage() {
   return (
-    <div className="bg-cyan-50">
+    <div className="bg-white">
       <Slider />
       <div
         className="w-full h-max inset-0 bg-contain bg-repeat-y"

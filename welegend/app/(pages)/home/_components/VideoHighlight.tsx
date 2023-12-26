@@ -73,10 +73,9 @@ const videoList: VideoHighlightList[] = [
 const VideoHighlight = () => {
   return (
     <div
-      className=" flex flex-col items-center relative mt-12 mb-12"
+      className=" flex flex-col items-center relative mt-20 mb-24"
       style={{
         maxWidth: '100%',
-        padding: '0 1rem',
         height: '100%',
       }}
     >
@@ -86,7 +85,7 @@ const VideoHighlight = () => {
         </h2>
       </div>
 
-      <div className="w-full flex flex-row flex-wrap justify-center items-center">
+      <div className="w-full flex flex-row flex-wrap justify-center items-center mb-12">
         <Swiper
           effect={'coverflow'}
           grabCursor={true}

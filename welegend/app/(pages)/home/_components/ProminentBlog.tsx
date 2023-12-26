@@ -43,17 +43,21 @@ const data: DataBlog[] = [
 
 const ProminentBlog = () => {
   return (
-    <div className="w-full flex flex-col items-center relative bg-w pt-14 pb-10 bg-white">
+    <div className="w-full flex flex-col items-center relative bg-w pt-14 pb-10 bg-cyan-50">
       <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
         Blog nổi bật
       </h2>
-      <div className="w-full h-[65vh] min-h-[550px] bg-white flex">
+      <div className="w-full h-[65vh] min-h-[550px] flex">
         <div className="flex flex-1 justify-center items-center ">
-          <div className="w-full h-full flex flex-col gap-9 justify-center items-center p-12">
+          <div className="w-full h-full flex flex-col gap-9 justify-center items-center p-12 px-16">
             <h2 className="text-neutral-600 text-3xl font-extrabold text-center">
               Giúp Con Bạn Phát Triển Hơn 30 Kỹ Năng Sống Trong đó có 10 Kỹ Năng
               Sống Cốt Lõi của WHO
             </h2>
+            <p className="text-center px-12">
+              Chúng tôi luôn ở đây và đồng hành cùng cháu bạn nhỏ. Chúng tôi sẽ
+              luôn là một phần của các bạn trên hành trình phát triển{' '}
+            </p>
             <button className="animate-bounce animate-infinite px-3 py-3 w-[250px] min-w-[226px] mx-3 mb-3 bg-blue-400 rounded-[5px] border border-blue-400 text-white text-xs font-semibold transition duration-300 hover:bg-sky-500 hover:text-white bg-gradient-to-r from-blue-500 to-purple-500 transform-gpu hover:-translate-y-1 hover:shadow-lg">
               Phát triển kỹ năng sống
               <FontAwesomeIcon icon={faChevronRight} className="ml-4" />

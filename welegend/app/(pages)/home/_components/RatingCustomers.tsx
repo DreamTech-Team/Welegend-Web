@@ -61,7 +61,7 @@ const RatingCustomers = () => {
             <p
               className={`${
                 index === 1 ? 'text-white' : 'text-black'
-              } text-center`}
+              } text-center leading-7`}
             >
               {item.content}
             </p>

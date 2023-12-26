@@ -1,20 +1,37 @@
-import { useEffect, useRef, useState } from 'react';
+import { SetStateAction, useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import img1 from '../../../_externals/assets/home/child.jpg';
 import img2 from '../../../_externals/assets/home/boys.jpg';
 import img3 from '../../../_externals/assets/home/children1.jpeg';
 import img4 from '../../../_externals/assets/home/hands.jpg';
 
-export default function Slider({
-  autoSlide = true,
-  autoSlideInterval = 3000,
-}: {
-  autoSlide?: boolean;
-  autoSlideInterval?: number;
-}) {
-  // const slides = [img1, img2, img3, img4];
-  const slides = [
+import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import {
+  Autoplay,
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+} from 'swiper/modules';
+
+export default function Slider() {
+  interface SlideContent {
+    title: string;
+    subtitle: string;
+    description: string;
+  }
+
+  interface Slide {
+    image: StaticImageData;
+    content: SlideContent;
+  }
+  const slides: Slide[] = [
     {
       image: img1,
       content: {
@@ -52,103 +69,91 @@ export default function Slider({
       },
     },
   ];
-  const [curr, setCurr] = useState(0);
 
-  const resetTimer = () => {
-    if (!autoSlide) return;
-    clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(next, autoSlideInterval);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+
+  const handleSlideChangeTransitionEnd = (swiper: {
+    realIndex: SetStateAction<number>;
+  }) => {
+    setCurrentSlide(swiper.realIndex);
   };
-
-  const prev = () => {
-    setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
-    resetTimer();
-  };
-
-  const next = () => {
-    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
-    resetTimer();
-  };
-
-  useEffect(() => {
-    if (!autoSlide) return;
-    timeoutRef.current = setTimeout(next, autoSlideInterval);
-    return () => clearTimeout(timeoutRef.current);
-  }, [curr, slides[curr].content]);
-
-  const timeoutRef = useRef<NodeJS.Timeout | undefined>();
 
   return (
-    <div className="flex w-full">
-      <div
-        className="flex w-4/5 justify-center"
-        style={{ height: '80vh', backgroundColor: 'white' }}
+    <div className="relative w-full h-[80vh]">
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={{
+          nextEl: null,
+          prevEl: null,
+        }}
+        modules={[EffectCoverflow, Autoplay, Pagination, Navigation]}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        onSlideChangeTransitionEnd={handleSlideChangeTransitionEnd}
+        style={{
+          height: '100%',
+          width: '100%',
+          position: 'relative',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
       >
-        <div className="flex w-4/5 p-5">
-          <div
-            key={curr}
-            className="flex flex-col p-5 justify-center animate-fade-left animate-delay-200 animate-ease-out animate-alternate"
-          >
-            <p className="text-neutral-600 font-extrabold text-xl pb-2.5">
-              {slides[curr].content.title}
-            </p>
-            <p className="text-neutral-600 font-extrabold text-5xl pt-2.5">
-              {slides[curr].content.subtitle}
-            </p>
-            <p className="text-neutral-600 font-extralight text-2xl pt-5">
-              {slides[curr].content.description}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex w-full bg-white" style={{ height: '80vh' }}>
-        <div className="flex overflow-hidden my-[40px] mx-[10px] relative justify-center items-center rounded-md border-dotted border-2 divide-sky-500">
-          <div
-            className="flex w-full h-full transition-transform ease-out duration-500 "
-            style={{
-              transform: `translateX(-${curr * 100}%)`,
-            }}
-          >
-            {slides.map((item, idx) => (
+        {slides.map((item, idx) => (
+          <SwiperSlide key={idx}>
+            <div className="w-full h-full">
               <Image
-                key={idx}
                 src={item.image}
                 alt=""
-                className="flex justify-center items-center rounded-md"
-                style={{ width: '100%', height: 'auto' }}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-md"
               />
-            ))}
-          </div>
-          <div className="absolute inset-0 flex items-center justify-between p-4">
-            <button
-              onClick={prev}
-              className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-            >
-              <ChevronLeft size={30} color="gray" />
-            </button>
-            <button
-              onClick={next}
-              className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-            >
-              <ChevronRight size={30} color="gray" />
-            </button>
-          </div>
-          <div className="absolute bottom-4 right-0 left-0">
-            <div className="flex items-center justify-center gap-2">
-              {slides.map((_, i) => (
-                <div
-                  key={i}
-                  className={`
-                  transition-all w-3 h-3 bg-white rounded-full
-                  ${curr === i ? 'p-2' : 'bg-opacity-50'}
-                `}
-                />
-              ))}
             </div>
-          </div>
-        </div>
-      </div>
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                background:
+                  'linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0))',
+              }}
+            >
+              {currentSlide === idx && (
+                <div className="h-full w-1/2 flex items-center">
+                  <div className="flex flex-col text-white font-semibold items-center text-center p-20 animate-fade-right animate-once">
+                    <h2 className="text-5xl font-bold mb-10">
+                      {item.content.title}
+                    </h2>
+                    <p className="text-2xl font-bold mb-3">
+                      {item.content.subtitle}
+                    </p>
+                    <p>{item.content.description}</p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
