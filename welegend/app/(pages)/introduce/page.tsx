@@ -21,7 +21,7 @@ export default function IntroducePage() {
       >
         <Thanks />
         <TruthStory />
-        <Lectures />
+        {/* <Lectures /> */}
         <ValueCompany />
       </div>
     </div>
