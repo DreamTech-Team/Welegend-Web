@@ -1,51 +1,83 @@
-import { Carousel, Radio, RadioChangeEvent } from 'antd';
-import Meta from 'antd/es/card/Meta';
-import { DotPosition } from 'antd/es/carousel';
-import Image from 'next/image';
-import { useState } from 'react';
-import { profile_image } from '~/app/_externals/assets/introduce';
-
-const contentStyle: React.CSSProperties = {
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-};
+import {
+  faChevronLeft,
+  faChevronRight,
+  faPenRuler,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button, Carousel } from 'antd';
+import { chunk } from 'lodash';
+import { useRef, useState } from 'react';
+import { CardInfo } from './CardInfo';
 
 export function Lectures() {
-  const [dotPosition, setDotPosition] = useState<DotPosition>('top');
+  const [listItems, setListItems] = useState([
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+  ]);
+  const chunks = chunk(listItems, 4);
 
-  const handlePositionChange = ({ target: { value } }: RadioChangeEvent) => {
-    setDotPosition(value);
+  const carouselRef = useRef<any>(null);
+
+  const handleNext = () => {
+    if (carouselRef.current) {
+      carouselRef.current.next();
+    }
+  };
+
+  const handlePrev = () => {
+    if (carouselRef.current) {
+      carouselRef.current.prev();
+    }
   };
 
   return (
-    <>
-      <Radio.Group
-        onChange={handlePositionChange}
-        value={dotPosition}
-        style={{ marginBottom: 8 }}
-      >
-        <Radio.Button value="top">Top</Radio.Button>
-        <Radio.Button value="bottom">Bottom</Radio.Button>
-        <Radio.Button value="left">Left</Radio.Button>
-        <Radio.Button value="right">Right</Radio.Button>
-      </Radio.Group>
-      <Carousel dotPosition={dotPosition}>
-        <div>
-          <h3 style={contentStyle}>1</h3>
+    <div className="my-32 ">
+      <div className="text-center py-12 ">
+        <h1 className="w-full font-bold text-[#151515] sm:text-[25px] md:text-[34px]">
+          Đội Ngũ Giảng Viên - Nghiên Cứu Viên
+        </h1>
+        <p className=" text-[#969595] m-5 sm:text-[18px] md:text-[20px] uppercase font-medium">
+          Welegend
+        </p>
+        <div className="relative">
+          <FontAwesomeIcon
+            className="relative z-1"
+            icon={faPenRuler}
+            size="lg"
+          />
+          <div className="absolute z-0 top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%] w-[200px] h-[2px] border border-[#969595] border-dashed"></div>
         </div>
-        <div>
-          <h3 style={contentStyle}>2</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>3</h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>4</h3>
-        </div>
-      </Carousel>
-    </>
+      </div>
+      <div className="relative">
+        <Carousel ref={carouselRef} autoplay>
+          {chunks.map((items, index) => (
+            <div key={index}>
+              <div className="flex flex-wrap justify-center gap-[2%]">
+                {items.map((item) => (
+                  <CardInfo key={item} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </Carousel>
+
+        <Button
+          type="primary"
+          shape="circle"
+          size="large"
+          style={{ position: 'absolute', top: '50%', left: '5%' }}
+          icon={<FontAwesomeIcon icon={faChevronLeft} size="lg" />}
+          onClick={handlePrev}
+        />
+
+        <Button
+          type="primary"
+          shape="circle"
+          size="large"
+          style={{ position: 'absolute', top: '50%', right: '5%' }}
+          icon={<FontAwesomeIcon icon={faChevronRight} size="lg" />}
+          onClick={handleNext}
+        />
+      </div>
+    </div>
   );
 }

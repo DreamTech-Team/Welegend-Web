@@ -10,7 +10,7 @@ export function Thanks() {
           src={no_image.src}
           width={400}
           height={400}
-          alt="Picture of the author"
+          alt="no image"
         />
 
         <Image
@@ -18,7 +18,7 @@ export function Thanks() {
           src={rainbow_image.src}
           width={210}
           height={200}
-          alt="Picture of the author"
+          alt="no image"
         />
       </div>
       <div className="md:w-3/4 text-center mt-12 md:mt-0">
