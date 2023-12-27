@@ -14,6 +14,7 @@ services:
         container_name: nginx-reverse-proxy
         ports:
             - "80:80"
+            - "443:443"
         volumes:
             - ./nginx:/etc/nginx
         depends_on:
