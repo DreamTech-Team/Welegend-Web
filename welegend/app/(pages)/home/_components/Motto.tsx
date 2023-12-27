@@ -10,6 +10,7 @@ import {
   faR,
 } from '@fortawesome/free-solid-svg-icons';
 import MottoImg from '../../../_externals/assets/home/motto.jpg';
+import MottoImgChild from '../../../_externals/assets/home/child.jpg';
 import MottoPeopleImg from '../../../_externals/assets/home/people.jpg';
 
 const quotes = [
@@ -32,20 +33,20 @@ const quotes = [
 
 const Motto = () => {
   return (
-    <div className="w-full flex flex-col items-center relative bg-w pt-20 pb-10">
+    <div className="w-full flex flex-col items-center relative bg-white pt-20 pb-10">
       <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
         Phương châm - Sứ mệnh
       </h2>
-      <div className="w-[70%] h-[400px] flex justify-center items-center relative p-6 bg-cyan-50 border-dashed border-2 border-gray-300 rounded-xl">
-        <div className="flex-none w-[40%] h-full p-3 flex justify-center">
+      <div className="w-[70%] lg:w-[70%] md:w-[70%] lg:h-[400px] md:h-[450px] h-[400px] flex lg:flex-nowrap flex-wrap justify-center items-center relative lg:p-6 md:p-2 bg-cyan-50 border-dashed border-2 border-gray-300 rounded-xl">
+        <div className="flex-none lg:h-full lg:w-[40%] w-[100%] md:h-[60%] h-[60%] md:p-3 p-1 flex justify-center">
           <Image
-            src={MottoImg}
+            src={MottoPeopleImg}
             alt="Ảnh team"
             className="flex justify-center items-center rounded-md"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </div>
-        <div className="grow h-full bg-cyan-50 p-1 flex ">
+        <div className="grow h-[40%] lg:h-[100%] bg-cyan-50 flex md:px-8 ">
           <Swiper
             modules={[Virtual, Autoplay]}
             spaceBetween={50}
@@ -55,16 +56,16 @@ const Motto = () => {
             loop={true}
             direction="vertical"
             autoplay={{
-              delay: 3000,
+              delay: 5000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
           >
             {quotes.map((quote, index) => (
               <SwiperSlide virtualIndex={index} key={index}>
-                <div className="flex flex-col h-full justify-center items-center p-6 pt-1 ">
-                  <div className="flex  flex-col items-center justify-center">
-                    <p className="leading-8 font-light text-2xl items-center justify-center text-neutral-600 text-center ">
+                <div className="flex flex-col h-full justify-center items-center md:p-6 py-2 px-3 ">
+                  <div className="flex flex-col items-center justify-center">
+                    <p className="lg:leading-8 font-light lg:text-2xl md:text-[18px] md:leading-[22px] text-xs items-center justify-center text-neutral-600 text-center ">
                       <FontAwesomeIcon
                         icon={faQuoteLeft}
                         className="pr-2 text-slate-400"
@@ -75,7 +76,7 @@ const Motto = () => {
                         className="pl-2 text-slate-400"
                       />
                     </p>
-                    <p className="font-semibold text-xl text-slate-500 mt-4">
+                    <p className="font-semibold md:text-[20px] text-xs text-center text-slate-500 md:mt-4 mt-2">
                       {quote.author}
                     </p>
                   </div>

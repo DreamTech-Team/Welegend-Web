@@ -43,7 +43,7 @@ const BuildLifeSkill = () => {
 
   return (
     <div className="w-full flex flex-col items-center relative bg-w pt-20 pb-10">
-      <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
+      <h2 className="text-neutral-600 lg:text-2xl text-xl text-center font-extrabold mb-10">
         Xây dựng kỹ năng sống bằng những câu chuyện
       </h2>
       <div className="w-full">

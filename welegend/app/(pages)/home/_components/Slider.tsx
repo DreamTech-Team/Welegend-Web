@@ -79,14 +79,14 @@ export default function Slider() {
   };
 
   return (
-    <div className="relative w-full h-[80vh]">
+    <div className="relative w-full h-[70vh] lg:h-[80vh]">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -117,13 +117,14 @@ export default function Slider() {
       >
         {slides.map((item, idx) => (
           <SwiperSlide key={idx}>
-            <div className="w-full h-full">
+            <div className="lg:w-full md:w-full sm:f-full h-full">
               <Image
                 src={item.image}
                 alt=""
                 layout="fill"
                 objectFit="cover"
                 className="rounded-md"
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
             </div>
             <div
@@ -138,15 +139,17 @@ export default function Slider() {
               }}
             >
               {currentSlide === idx && (
-                <div className="h-full w-1/2 flex items-center">
-                  <div className="flex flex-col text-white font-semibold items-center text-center p-20 animate-fade-right animate-once">
-                    <h2 className="text-5xl font-bold mb-10">
+                <div className="h-full lg:w-1/2 md:w-full sm:w-full flex items-center">
+                  <div className="flex w-full flex-col text-white lg:p-20 md:p-20 p-8 font-semibold items-center justify-center text-center animate-fade-right animate-once">
+                    <h2 className="lg:text-5xl md:text-5xl text-[30px] font-bold pb-10">
                       {item.content.title}
                     </h2>
-                    <p className="text-2xl font-bold mb-3">
+                    <p className="lg:text-2xl md:text-[24px] text-[20px] font-bold pb-3">
                       {item.content.subtitle}
                     </p>
-                    <p>{item.content.description}</p>
+                    <p className="lg:text-[20px] md:text-[20px] sm:text-[16px] font-light">
+                      {item.content.description}
+                    </p>
                   </div>
                 </div>
               )}

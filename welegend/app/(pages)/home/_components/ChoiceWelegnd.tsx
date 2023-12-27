@@ -10,23 +10,23 @@ import Start from '../../../_externals/assets/home/stars-sharp-regular.svg';
 
 const ChoiceWelegnd = () => {
   return (
-    <div className="w-full flex flex-col items-center relative bg-w pt-12 pb-10 px-[10px]">
-      <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
+    <div className="w-full h-full flex flex-col items-center relative bg-w pt-12 pb-10 px-[10px]">
+      <h2 className="text-neutral-600 lg:text-2xl text-xl text-center font-extrabold mb-10">
         Tại sao nên chọn sản phẩm từ Welegend?
       </h2>
-      <div className="w-full h-[75vh] min-h-[600px]">
-        <div className="flex h-full justify-center items-center">
-          <div className="w-[50%] h-full bg-slate-400">
+      <div className="w-full lg:h-[75vh] min-h-[600px]">
+        <div className="flex h-full justify-center items-center lg:flex-row flex-col">
+          <div className="lg:w-[50%] w-[70%] h-full bg-slate-400">
             <Image
               src={ChildrenCretivity}
               alt="Ảnh"
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="w-[50%] h-full flex flex-col">
-            <div className="flex justify-end flex-1 w-full h-full bg-slate-100">
-              <div className="p-12 pl-5 w-4/5 ">
-                <p className="font-bold text-4xl text-neutral-600 mt-4">
+          <div className="lg:w-[50%] h-full flex flex-col">
+            <div className="flex lg:justify-end flex-1 w-full  bg-slate-100">
+              <div className="p-12 pl-10 lg:w-4/5 w-full">
+                <p className="font-bold lg:text-4xl md:text-3xl text-2xl  text-neutral-600 mt-4">
                   <span className="font-normal">TẠI SAO</span> NÊN CHỌN CHÚNG
                   TÔI?
                 </p>
@@ -36,9 +36,10 @@ const ChoiceWelegnd = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-1 w-full h-full bg-teal-900">
+
+            <div className="flex flex-1 w-full  bg-teal-900">
               <div className="w-full h-full flex flex-col p-8 ">
-                <div className="group h-full w-full  [perspective:1000px]">
+                <div className="group h-full w-full [perspective:1000px]">
                   <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                     <div className="absolute inset-0">
                       <div className="h-full w-full">
@@ -70,7 +71,7 @@ const ChoiceWelegnd = () => {
                 </div>
               </div>
               <div className="w-full h-full flex flex-col p-8 bg-black flip-card">
-                <div className="group h-full w-full  [perspective:1000px]">
+                <div className="group h-full w-full [perspective:1000px]">
                   <div className="relative h-full w-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                     <div className="absolute inset-0">
                       <div className="h-full w-full">

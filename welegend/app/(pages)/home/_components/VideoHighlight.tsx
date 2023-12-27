@@ -72,13 +72,7 @@ const videoList: VideoHighlightList[] = [
 
 const VideoHighlight = () => {
   return (
-    <div
-      className=" flex flex-col items-center relative mt-20 mb-24"
-      style={{
-        maxWidth: '100%',
-        height: '100%',
-      }}
-    >
+    <div className=" flex flex-col items-center relative mt-20 mb-24">
       <div className="flex flex-col items-center">
         <h2 className="text-neutral-600 text-2xl font-extrabold mb-4">
           Các dự án nổi bật của Welegend
@@ -110,6 +104,18 @@ const VideoHighlight = () => {
             alignItems: 'center',
             borderRadius: '10px',
             padding: '20px',
+          }}
+          breakpoints={{
+            // 640px
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            // 768px
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
           }}
         >
           {videoList.map((video, index) => (
