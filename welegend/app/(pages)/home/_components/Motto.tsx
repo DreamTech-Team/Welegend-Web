@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Virtual, Autoplay } from 'swiper/modules';
@@ -32,20 +32,20 @@ const quotes = [
 
 const Motto = () => {
   return (
-    <div className="w-full flex flex-col items-center relative bg-w pt-12 pb-10">
+    <div className="w-full flex flex-col items-center relative bg-w pt-20 pb-10">
       <h2 className="text-neutral-600 text-2xl font-extrabold mb-10">
         Phương châm - Sứ mệnh
       </h2>
-      <div className="w-[90%] h-[400px] flex justify-center items-center relative p-6 bg-white border-dashed border-2 border-gray-200 rounded-xl">
-        <div className="flex-none w-[25%] h-full p-3 flex justify-center">
+      <div className="w-[70%] h-[400px] flex justify-center items-center relative p-6 bg-cyan-50 border-dashed border-2 border-gray-300 rounded-xl">
+        <div className="flex-none w-[40%] h-full p-3 flex justify-center">
           <Image
             src={MottoImg}
             alt="Ảnh team"
             className="flex justify-center items-center rounded-md"
-            style={{ width: '100%', height: 'auto' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </div>
-        <div className="grow h-full bg-white p-1 flex ">
+        <div className="grow h-full bg-cyan-50 p-1 flex ">
           <Swiper
             modules={[Virtual, Autoplay]}
             spaceBetween={50}
@@ -55,15 +55,16 @@ const Motto = () => {
             loop={true}
             direction="vertical"
             autoplay={{
-              delay: 2500,
+              delay: 3000,
               disableOnInteraction: false,
+              pauseOnMouseEnter: true,
             }}
           >
             {quotes.map((quote, index) => (
               <SwiperSlide virtualIndex={index} key={index}>
-                <div className="flex flex-col items-center p-6 pt-1 ">
-                  <div className="flex flex-col items-center">
-                    <p className="leading-8 font-light text-2xl text-orange-500 text-center font-mono">
+                <div className="flex flex-col h-full justify-center items-center p-6 pt-1 ">
+                  <div className="flex  flex-col items-center justify-center">
+                    <p className="leading-8 font-light text-2xl items-center justify-center text-neutral-600 text-center ">
                       <FontAwesomeIcon
                         icon={faQuoteLeft}
                         className="pr-2 text-slate-400"
@@ -82,10 +83,6 @@ const Motto = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
-        <div className="flex-none w-[25%] h-full p-3 flex gap-4 flex-col justify-center">
-          <div className="w-full flex-1 bg-red-200"></div>
-          <div className="w-full flex-1 bg-slate-400"></div>
         </div>
       </div>
     </div>

@@ -35,7 +35,7 @@ const prominentStoryLists: ProminentStory[] = [
 
 function ProminentStory() {
   return (
-    <div className="w-full flex flex-col items-center relative">
+    <div className="w-full flex flex-col items-center relative pt-9">
       <div className="flex flex-col items-center cursor-pointer">
         <FontAwesomeIcon
           icon={faAngleDown}
@@ -51,7 +51,7 @@ function ProminentStory() {
         {prominentStoryLists.map((item: ProminentStory, index) => (
           <div
             key={index}
-            className="flex px-4 py-6 max-w-[419px] bg-white rounded-[40px] mx-4 mb-5"
+            className="flex px-4 py-6 max-w-[419px] bg-cyan-50 rounded-[40px] mx-4 mb-5"
           >
             <div className="pic-stories mr-4">
               <Image
