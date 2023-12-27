@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from 'react-feather';
 import Image, { StaticImageData } from 'next/image';
 import img1 from '../../../_externals/assets/home/child.jpg';
 import img2 from '../../../_externals/assets/home/boys.jpg';
-import img3 from '../../../_externals/assets/home/children1.jpeg';
+import img3 from '../../../_externals/assets/home/children1.jpg';
 import img4 from '../../../_externals/assets/home/hands.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -31,6 +31,7 @@ export default function Slider() {
     image: StaticImageData;
     content: SlideContent;
   }
+
   const slides: Slide[] = [
     {
       image: img1,
