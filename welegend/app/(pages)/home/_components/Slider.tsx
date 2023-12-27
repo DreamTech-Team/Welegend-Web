@@ -7,7 +7,6 @@ import img3 from '../../../_externals/assets/home/children1.jpg';
 import img4 from '../../../_externals/assets/home/hands.jpg';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
