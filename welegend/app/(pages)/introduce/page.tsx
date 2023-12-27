@@ -8,6 +8,7 @@ import {
   TruthStory,
   ValueCompany,
 } from './_components';
+import { Buildings } from './_components/Buildings';
 
 export default function IntroducePage() {
   return (
@@ -23,6 +24,7 @@ export default function IntroducePage() {
         <TruthStory />
         <Lectures />
         <ValueCompany />
+        <Buildings />
       </div>
     </div>
   );
