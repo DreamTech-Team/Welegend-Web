@@ -41,7 +41,7 @@ const dataRating: Rating[] = [
 const RatingCustomers = () => {
   return (
     <div className="w-full flex flex-col items-center relative bg-w pt-12 pb-10">
-      <h2 className="text-neutral-600 text-2xl font-extrabold mb-5">
+      <h2 className="text-neutral-600 lg:text-2xl text-xl text-center px-5 font-extrabold mb-5">
         Đọc những gì khách hàng của chúng tôi nói
       </h2>
       <div className="flex items-center justify-center w-[100px] h-[10s0px]">
@@ -49,19 +49,19 @@ const RatingCustomers = () => {
           src={RightRepresent}
           alt={'Ảnh'}
           width={100}
-          className="h-auto self-center"
+          className="h-auto self-center lg:w-[100px] md:w-[70px] w-[50px]"
         />
       </div>
-      <div className="w-full h-full flex justify-center items-center px-14">
+      <div className="w-full h-full flex justify-center items-center px-14 lg:flex-nowrap flex-wrap">
         {dataRating.map((item, index) => (
           <div
             key={index}
-            className={`w-full h-full min-h-[555px] flex flex-col justify-around items-center p-10 rounded-md ${item.backgroud}`}
+            className={`w-full h-full lg:min-h-[555px] flex flex-col justify-around items-center md:p-10 p-5 rounded-md ${item.backgroud}`}
           >
             <p
               className={`${
                 index === 1 ? 'text-white' : 'text-black'
-              } text-center leading-7`}
+              } text-center md:text-[18px] text-[14px] leading-7`}
             >
               {item.content}
             </p>
