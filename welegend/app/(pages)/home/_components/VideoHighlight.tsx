@@ -116,6 +116,10 @@ const VideoHighlight = () => {
               slidesPerView: 2,
               spaceBetween: 30,
             },
+            1024: {
+              spaceBetween: 90,
+              slidesPerView: 3,
+            },
           }}
         >
           {videoList.map((video, index) => (
