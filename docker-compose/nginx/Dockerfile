@@ -1,7 +1,8 @@
 FROM nginx:alpine
 
-COPY nginx.conf /etc/nginx/
+COPY . /etc/nginx/
 
 CMD ["nginx"]
 
 EXPOSE 80/tcp
+EXPOSE 443/tcp
