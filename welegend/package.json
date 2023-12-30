@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run check-format && npm run lint && npm run check-types && next build",
+    "build": "npm run format && npm run check-format && npm run lint && npm run check-types && next build",
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
