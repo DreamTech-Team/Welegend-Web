@@ -106,7 +106,7 @@ export default function Navbar() {
                   color: indexActive == 1 ? '#078FD2' : '#000',
                 }}
               >
-                Sản phẩm khác
+                Giới thiệu
               </button>
               <button
                 onClick={() => setActiveIndex(2)}
@@ -115,7 +115,7 @@ export default function Navbar() {
                   color: indexActive == 2 ? '#078FD2' : '#000',
                 }}
               >
-                Giới thiệu
+                Câu chuyện
               </button>
               <button
                 onClick={() => setActiveIndex(3)}
@@ -124,7 +124,7 @@ export default function Navbar() {
                   color: indexActive == 3 ? '#078FD2' : '#000',
                 }}
               >
-                Câu chuyện
+                Blog
               </button>
               <button onClick={handleChangeFindInputState}>
                 <FontAwesomeIcon
@@ -184,7 +184,7 @@ export default function Navbar() {
                 color: indexActive == 1 ? '#FFF' : '#000',
               }}
             >
-              Sản phẩm khác
+              Giới thiệu
             </button>
             <button
               onClick={() => setActiveIndex(2)}
@@ -194,7 +194,7 @@ export default function Navbar() {
                 color: indexActive == 2 ? '#FFF' : '#000',
               }}
             >
-              Giới thiệu
+              Câu chuyện
             </button>
             <button
               onClick={() => setActiveIndex(3)}
@@ -204,7 +204,7 @@ export default function Navbar() {
                 color: indexActive == 3 ? '#FFF' : '#000',
               }}
             >
-              Câu chuyện
+              Blog
             </button>
           </div>
         ) : (
