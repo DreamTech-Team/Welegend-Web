@@ -4,10 +4,13 @@ import MainBackground from '~/app/../app/_externals/assets/stories/StoryBackgrou
 import Slider from './_components/Slider';
 import VideoHighlight from './_components/VideoHighlight';
 import Motto from './_components/Motto';
+import Mottov2 from './_components/Mottov2';
 import ProminentBlog from './_components/ProminentBlog';
 import BuildLifeSkill from './_components/BuildLifeSkill';
 import ChoiceWelegnd from './_components/ChoiceWelegnd';
 import RatingCustomers from './_components/RatingCustomers';
+import VideoTutorial from './_components/VideoTutorial';
+import Certificate from './_components/Certificate';
 
 export default function HomePage() {
   return (
@@ -19,12 +22,15 @@ export default function HomePage() {
           backgroundImage: `url(${MainBackground.src})`,
         }}
       >
-        <ProminentStory />
-        <Motto />
+        {/* <ProminentStory /> */}
+        {/* <Motto /> */}
+        <Mottov2 />
+        <VideoTutorial />
         <VideoHighlight />
         <ProminentBlog />
         <BuildLifeSkill />
         <ChoiceWelegnd />
+        <Certificate />
         <RatingCustomers />
       </div>
     </div>

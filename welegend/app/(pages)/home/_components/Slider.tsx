@@ -1,5 +1,6 @@
 import { SetStateAction, useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
+import ReactPlayer from 'react-player';
 import Image, { StaticImageData } from 'next/image';
 import img1 from '../../../_externals/assets/home/child.jpg';
 import img2 from '../../../_externals/assets/home/boys.jpg';
@@ -28,12 +29,15 @@ export default function Slider() {
 
   interface Slide {
     image: StaticImageData;
+    video: string;
     content: SlideContent;
   }
 
   const slides: Slide[] = [
     {
       image: img1,
+      video:
+        'https://firebasestorage.googleapis.com/v0/b/wncuploadimage.appspot.com/o/videos%2Fpexels-artem-podrez-7505332%20(Original).mp4?alt=media&token=08e430c2-e018-4030-8f93-9366e1ea459c',
       content: {
         title: 'WHY WELEGEND?',
         subtitle: 'We use Stories to Build 10 Core Life Skills in Children',
@@ -43,6 +47,8 @@ export default function Slider() {
     },
     {
       image: img2,
+      video:
+        'https://firebasestorage.googleapis.com/v0/b/wncuploadimage.appspot.com/o/videos%2Fpexels-artem-podrez-8088627%20(Original).mp4?alt=media&token=b349bd4d-1853-44c8-a5fc-14e874d8dc2e',
       content: {
         title: 'EARLY YEARS PROGRAMS (6M - 6Y)',
         subtitle: 'We Build Early Literacy Skills',
@@ -52,6 +58,8 @@ export default function Slider() {
     },
     {
       image: img3,
+      video:
+        'https://firebasestorage.googleapis.com/v0/b/wncuploadimage.appspot.com/o/videos%2Fproduction_id_5198159%20(2160p).mp4?alt=media&token=b5856938-5831-4fc6-98fe-c89806114ea3',
       content: {
         title: 'WELEGEND READING PROGRAMS (4Y - 12Y)',
         subtitle: 'We Build Reading Skills with Stories',
@@ -61,6 +69,8 @@ export default function Slider() {
     },
     {
       image: img4,
+      video:
+        'https://firebasestorage.googleapis.com/v0/b/wncuploadimage.appspot.com/o/videos%2Fproduction_id_5198161%20(2160p).mp4?alt=media&token=633b845d-900a-475a-b7c0-5f0b4c301610',
       content: {
         title: 'TALEYARN - A STORY BASED PLATFORM FOR ALL',
         subtitle: 'We help Children Adapt to the Ever Changing World',
@@ -79,14 +89,14 @@ export default function Slider() {
   };
 
   return (
-    <div className="relative w-full h-[70vh] lg:h-[80vh]">
+    <div className="relative w-full h-[70vh] lg:h-[90vh]">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
         autoplay={{
-          delay: 3000,
+          delay: 10000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -126,6 +136,15 @@ export default function Slider() {
                 className="rounded-md"
                 style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
+              {/* <div className="w-full h-full">
+                <ReactPlayer
+                  url={item.video}
+                  controls
+                  width="100%"
+                  height="100%"
+                  playing
+                />
+              </div> */}
             </div>
             <div
               style={{

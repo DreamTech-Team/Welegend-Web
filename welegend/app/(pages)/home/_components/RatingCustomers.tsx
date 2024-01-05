@@ -44,14 +44,14 @@ const RatingCustomers = () => {
       <h2 className="text-neutral-600 lg:text-2xl text-xl text-center px-5 font-extrabold mb-5">
         Đọc những gì khách hàng của chúng tôi nói
       </h2>
-      <div className="flex items-center justify-center w-[100px] h-[10s0px]">
+      {/* <div className="flex items-center justify-center w-[100px] h-[10s0px]">
         <Image
           src={RightRepresent}
           alt={'Ảnh'}
           width={100}
           className="h-auto self-center lg:w-[100px] md:w-[70px] w-[50px]"
         />
-      </div>
+      </div> */}
       <div className="w-full h-full flex justify-center items-center px-14 lg:flex-nowrap flex-wrap">
         {dataRating.map((item, index) => (
           <div
