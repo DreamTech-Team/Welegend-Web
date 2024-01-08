@@ -6,14 +6,17 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Carousel } from 'antd';
 import { chunk } from 'lodash';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CardInfo } from './CardInfo';
 
 export function Lectures() {
   const [listItems, setListItems] = useState([
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
   ]);
-  const chunks = chunk(listItems, 4);
+
+  const [numChunks, setNumChunks] = useState(4);
+
+  const chunks = chunk(listItems, numChunks);
 
   const carouselRef = useRef<any>(null);
 
@@ -28,6 +31,24 @@ export function Lectures() {
       carouselRef.current.prev();
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.matchMedia('(max-width: 600px)').matches) {
+        console.log('Responsive: Mobile or Tablet');
+        setNumChunks(1);
+      } else {
+        console.log('Responsive: Desktop');
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className="my-32 ">
