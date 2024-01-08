@@ -43,15 +43,15 @@ const data: DataBlog[] = [
 
 const ProminentBlog = () => {
   return (
-    <div className="w-full flex flex-col items-center relative bg-w pt-14 pb-10 bg-cyan-50">
-      <h2 className="text-neutral-600 text-2xl font-extrabold lg:mb-10 mb-4">
+    <div className="w-full flex flex-col items-center relative bg-w pt-14 pb-10 ">
+      {/* <h2 className="text-neutral-600 text-2xl font-extrabold lg:mb-10 mb-4">
         Blog nổi bật
-      </h2>
+      </h2> */}
       <div className="w-full lg:h-[65vh] lg:min-h-[550px] flex lg:flex-nowrap lg:flex-row flex-col">
         {/* Left */}
         <div className="flex flex-1 justify-center items-start ">
-          <div className="w-full h-full flex flex-col lg:gap-9 justify-start items-center lg:p-12 lg:px-16 px-20">
-            <h2 className="text-neutral-600 lg:text-3xl font-extrabold text-center">
+          <div className="w-full h-full flex flex-col lg:gap-9 justify-start lg:justify-center items-center lg:p-12 lg:px-16 px-20">
+            <h2 className="text-neutral-600 lg:text-2xl font-extrabold text-center">
               Giúp Con Bạn Phát Triển Hơn 30 Kỹ Năng Sống Trong đó có 10 Kỹ Năng
               Sống Cốt Lõi của WHO
             </h2>

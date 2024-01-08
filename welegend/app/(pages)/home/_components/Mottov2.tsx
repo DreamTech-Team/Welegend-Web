@@ -19,9 +19,6 @@ import { faCottonBureau } from '@fortawesome/free-brands-svg-icons';
 const Mottov2 = () => {
   return (
     <div className="w-full h-full flex flex-col items-center pt-20 lg:pb-[200px]">
-      <h2 className="text-neutral-600 lg:text-2xl text-xl font-extrabold pb-4">
-        Phương châm - Sứ mệnh
-      </h2>
       <div className="relative w-[90%] lg:w-[80%] md:w-[90%] lg:h-[500px] h-full flex lg:flex-nowrap flex-wrap justify-center items-center ">
         <div className="w-full h-full flex flex-col justify-center items-center relative lg:p-6 md:p-2 ">
           <div className="w-full h-full flex flex-col justify-center items-center">

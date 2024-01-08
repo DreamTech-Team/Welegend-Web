@@ -40,8 +40,8 @@ const dataRating: Rating[] = [
 
 const RatingCustomers = () => {
   return (
-    <div className="w-full flex flex-col items-center relative bg-w pt-12 pb-10">
-      <h2 className="text-neutral-600 lg:text-2xl text-xl text-center px-5 font-extrabold mb-5">
+    <div className="w-full flex flex-col items-center relative bg-w pt-12 pb-28">
+      <h2 className="text-neutral-600 lg:text-2xl text-xl text-center px-5 font-extrabold mb-10">
         Đọc những gì khách hàng của chúng tôi nói
       </h2>
       {/* <div className="flex items-center justify-center w-[100px] h-[10s0px]">

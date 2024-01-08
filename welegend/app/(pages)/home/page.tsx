@@ -26,8 +26,8 @@ export default function HomePage() {
         {/* <ProminentStory /> */}
         {/* <Motto /> */}
         <Mottov2 />
-        <VideoTutorial />
         <VideoHighlight />
+        <VideoTutorial />
         <ProminentBlog />
         <BuildLifeSkill />
         <ChoiceWelegnd />

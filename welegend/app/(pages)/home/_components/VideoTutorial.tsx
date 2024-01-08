@@ -37,8 +37,8 @@ function VideoTutorial() {
   const videoPath =
     'https://firebasestorage.googleapis.com/v0/b/wncuploadimage.appspot.com/o/images%2Fproduction-id-4496268-1080p_JNroVrxy.mp4?alt=media&token=01052c9d-39d4-40d1-9c01-c7ec3f18cbcb';
   return (
-    <div className="w-full flex flex-col items-center relative pt-20">
-      <div className="flex flex-col w-full px-10 lg:h-96 lg:flex-row justify-center items-center">
+    <div className="w-full flex flex-col items-center relative ">
+      <div className="flex flex-col w-full px-10 lg:h-96  justify-center items-center lg:flex-row-reverse">
         <div className="flex-1 h-full md:p-4 w-full">
           <div className="rounded-[10px] md:px-10 px-4 flex flex-col justify-center h-full w-full">
             <p className="flex justify-center text-center text-neutral-600 text-2xl font-extrabold lg:mb-10 mb-4">
