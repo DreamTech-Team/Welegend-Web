@@ -98,9 +98,9 @@ button {
 .logo_text_gradient {
   background: linear-gradient(
     179deg,
-    #fffbfc -153.28%,
-    rgba(227, 96, 151, 0.9) 32.77%,
-    rgba(255, 4, 215, 0.48) 177.47%
+    #fffbfc -0.89%,
+    rgba(239, 147, 186, 0.9) 50.08%,
+    rgba(250, 83, 223, 0.78) 82.86%
   );
   background-clip: text;
   -webkit-background-clip: text;
