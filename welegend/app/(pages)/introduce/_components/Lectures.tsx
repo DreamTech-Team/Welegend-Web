@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Carousel } from 'antd';
 import { chunk } from 'lodash';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { CardInfo } from './CardInfo';
 
 export function Lectures() {
@@ -14,6 +14,9 @@ export function Lectures() {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
   ]);
   const chunks = chunk(listItems, 4);
+
+
+  const [numChunks, setNumChunks] = useState(4);
 
   const carouselRef = useRef<any>(null);
 
@@ -28,6 +31,27 @@ export function Lectures() {
       carouselRef.current.prev();
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.matchMedia('(max-width: 730px)').matches) {
+        setNumChunks(1);
+      } else if (window.matchMedia('(max-width: 1024px)').matches) {
+        setNumChunks(2);
+      } else if (window.matchMedia('(max-width: 1280px)').matches) {
+        setNumChunks(3);
+      } else {
+        setNumChunks(4);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className="my-32 ">
@@ -49,7 +73,7 @@ export function Lectures() {
       </div>
       <div className="relative">
         <Carousel ref={carouselRef} autoplay>
-          {chunks.map((items, index) => (
+          {chunk(listItems, numChunks).map((items, index) => (
             <div key={index}>
               <div className="flex flex-wrap justify-center gap-[2%]">
                 {items.map((item) => (

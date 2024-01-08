@@ -41,7 +41,7 @@ export function ValueCompany() {
           }}
         ></div>
       </div>
-      <div className="relative z-999 bg-[#035392] mt-[32px] h-[32px]"></div>
+      <div className="relative z-2 bg-[#035392] mt-[30px] h-[32px]"></div>
 
       <div className="bg-[#035392] text-white pb-20">
         <div className="text-center pt-24">
