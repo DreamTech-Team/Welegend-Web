@@ -76,6 +76,21 @@ button {
   left: 0;
 }
 
+.pic-stories {
+  height: 200px;
+  width: 140px;
+
+  background: #383737;
+
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10% 10%;
+  border-bottom-right-radius: 70% 10%;
+  border-bottom-left-radius: 10% 10%;
+
+  transform: rotate(0deg);
+  overflow: hidden;
+}
+
 .logo_text {
   font-family: "Nerko One", cursive;
 }
