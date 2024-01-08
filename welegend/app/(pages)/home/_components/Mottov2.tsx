@@ -35,8 +35,8 @@ const Mottov2 = () => {
               <Image
                 src={Girl1}
                 alt="Ảnh team"
-                className="flex justify-center items-center rounded-md"
-                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                className="flex justify-center items-center rounded-md object-contain"
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
             <div className="grow flex flex-col items-center h-[40%] lg:h-[100%] md:pt-[30px] pt-[20px]">
@@ -54,11 +54,10 @@ const Mottov2 = () => {
               <Image
                 src={Girl2}
                 alt="Ảnh team"
-                className="flex justify-center items-center rounded-md"
+                className="flex justify-center items-center rounded-md object-contain"
                 style={{
                   width: '100%',
                   height: '100%',
-                  objectFit: 'contain',
                 }}
               />
             </div>

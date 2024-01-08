@@ -42,8 +42,8 @@ const Motto = () => {
           <Image
             src={MottoPeopleImg}
             alt="Ảnh team"
-            className="flex justify-center items-center rounded-md"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            className="flex justify-center items-center rounded-md object-cover"
+            style={{ width: '100%', height: '100%' }}
           />
         </div>
         <div className="grow h-[40%] lg:h-[100%] bg-cyan-50 flex md:px-8 ">

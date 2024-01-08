@@ -131,9 +131,8 @@ export default function Slider() {
               <Image
                 src={item.image}
                 alt=""
-                layout="fill"
-                objectFit="cover"
-                className="rounded-md"
+                fill
+                className="rounded-md object-cover"
                 style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
               {/* <div className="w-full h-full">
