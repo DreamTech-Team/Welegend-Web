@@ -16,8 +16,6 @@ export function Lectures() {
 
   const [numChunks, setNumChunks] = useState(4);
 
-  const chunks = chunk(listItems, numChunks);
-
   const carouselRef = useRef<any>(null);
 
   const handleNext = () => {
@@ -34,11 +32,14 @@ export function Lectures() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.matchMedia('(max-width: 600px)').matches) {
-        console.log('Responsive: Mobile or Tablet');
+      if (window.matchMedia('(max-width: 730px)').matches) {
         setNumChunks(1);
+      } else if (window.matchMedia('(max-width: 1024px)').matches) {
+        setNumChunks(2);
+      } else if (window.matchMedia('(max-width: 1280px)').matches) {
+        setNumChunks(3);
       } else {
-        console.log('Responsive: Desktop');
+        setNumChunks(4);
       }
     };
 
@@ -70,7 +71,7 @@ export function Lectures() {
       </div>
       <div className="relative">
         <Carousel ref={carouselRef} autoplay>
-          {chunks.map((items, index) => (
+          {chunk(listItems, numChunks).map((items, index) => (
             <div key={index}>
               <div className="flex flex-wrap justify-center gap-[2%]">
                 {items.map((item) => (
