@@ -1,22 +1,22 @@
 'use client';
-import MainBackground from '~/app/../app/_externals/assets/stories/StoryBackground.png';
+
 import Image from 'next/image';
+import TagBlogs from './_components/TagBlogs';
+import Family from '~/app/../app/_externals/assets/blogs/family.png';
 
-import Family from '~/app/../app/_externals/assets/posts/family.png';
-import Read from '~/app/../app/_externals/assets/stories/ic_read.svg';
-
-const a =
-  'https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-watercolor-blue-soft-banner-web-banner-background-backgroundbanner-backgroundsoft-backgroundblue-image_62323.jpg';
+const background =
+  'https://banghieuviet.org/wp-content/uploads/2023/08/nen-xanh-duong-pastel.jpg';
 
 export default function StoriesPage() {
   return (
-    <div bg-white>
-      <div
-        style={{
-          backgroundImage: `url(${a})`,
-        }}
-        className="w-full py-8 bg-cover bg-repeat-y px-36"
-      >
+    <div
+      bg-white
+      // style={{
+      //   backgroundImage: `url(${background})`,
+      // }}
+      className="w-full bg-cover bg-repeat-y"
+    >
+      <div className="w-full py-8 bg-cover bg-repeat-y px-36">
         <p className="text-3xl font-bold mb-3">BLOG</p>
         <p className="text-lg">
           Chia sẻ hành trình giáo dục tuyệt vời của trẻ em qua những bài viết
@@ -25,280 +25,151 @@ export default function StoriesPage() {
           học tập được khám phá mỗi ngày.
         </p>
       </div>
-      <div className="px-36 flex my-6 gap-9 flex-wrap">
-        <div>
-          <div
-            className="relative h-96 w-96"
-            style={{ backgroundColor: '#fff', borderRadius: '36px' }}
-          >
-            <Image
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              src={Family}
-              width={300}
-              height={300}
-              alt="Picture of the author"
-            />
-            <div
-              className="absolute"
-              style={{
-                bottom: '-20px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-              }}
-            >
-              <button
-                className="px-12 py-2.5 border rounded-3xl transition duration-400 transform-gpu hover:-translate-y-1 hover:shadow-lg text-white text-sm font-normal"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(90deg,#9b26b6 0,#b52cd5 50%,#9b26b6)',
-                }}
-              >
-                Xem thêm
-              </button>
-            </div>
-          </div>
-          <div className="mt-7 max-w-sm">
-            <p className="text-center mb-2 font-semibold text-lg">
-              1. Đây là KIDPOD
-            </p>
-            <p className="text-center text-lg font-light">
-              Hộp kể chuyện kết nối internet phát chuyện kể, bài hát.
-            </p>
-          </div>
+      <div className="flex mt-6 px-36">
+        <div
+          style={{ width: '70%' }}
+          className="pr-10 w-full flex flex-wrap gap-8"
+        >
+          <TagBlogs />
+          <TagBlogs />
+          <TagBlogs />
+          <TagBlogs />
         </div>
-
-        <div>
-          <div
-            className="relative h-96 w-96"
-            style={{ backgroundColor: '#fff', borderRadius: '36px' }}
-          >
-            <Image
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              src={Family}
-              width={300}
-              height={300}
-              alt="Picture of the author"
+        <div style={{ width: '35%' }}>
+          <div className="w-full">
+            <input
+              type="text"
+              placeholder="Tìm kiếm"
+              className="px-4 py-2 border-none text-base font-light leading rounded-s"
+              style={{ width: '75%' }}
             />
-            <div
-              className="absolute"
+            <button
               style={{
-                bottom: '-20px',
-                left: '50%',
-                transform: 'translateX(-50%)',
+                backgroundColor: '#69727d',
+                color: '#fff',
+                width: '25%',
               }}
+              className="px-4 py-2 rounded-e border-none"
             >
-              <button
-                className="px-12 py-2.5 border rounded-3xl transition duration-400 transform-gpu hover:-translate-y-1 hover:shadow-lg text-white text-sm font-normal"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(90deg,#9b26b6 0,#b52cd5 50%,#9b26b6)',
-                }}
-              >
-                Xem thêm
-              </button>
-            </div>
+              Tìm kiếm
+            </button>
           </div>
-          <div className="mt-7 max-w-sm">
-            <p className="text-center mb-2 font-semibold text-lg">
-              1. Đây là KIDPOD
-            </p>
-            <p className="text-center text-lg font-light">
-              Hộp kể chuyện kết nối internet phát chuyện kể, bài hát.
-            </p>
-          </div>
-        </div>
 
-        <div>
-          <div
-            className="relative h-96 w-96"
-            style={{ backgroundColor: '#fff', borderRadius: '36px' }}
-          >
-            <Image
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              src={Family}
-              width={300}
-              height={300}
-              alt="Picture of the author"
-            />
-            <div
-              className="absolute"
-              style={{
-                bottom: '-20px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-              }}
-            >
-              <button
-                className="px-12 py-2.5 border rounded-3xl transition duration-400 transform-gpu hover:-translate-y-1 hover:shadow-lg text-white text-sm font-normal"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(90deg,#9b26b6 0,#b52cd5 50%,#9b26b6)',
-                }}
-              >
-                Xem thêm
-              </button>
-            </div>
-          </div>
-          <div className="mt-7 max-w-sm">
-            <p className="text-center mb-2 font-semibold text-lg">
-              1. Đây là KIDPOD
+          <div className="flex items-center my-3">
+            <p className="text-2xl font-bold" style={{ width: '55%' }}>
+              BÀI VIẾT LIÊN QUAN
             </p>
-            <p className="text-center text-lg font-light">
-              Hộp kể chuyện kết nối internet phát chuyện kể, bài hát.
-            </p>
+            <p
+              className="border-solid border-gray-700 border-b-2"
+              style={{ width: '45%' }}
+            ></p>
           </div>
-        </div>
 
-        <div>
-          <div
-            className="relative h-96 w-96"
-            style={{ backgroundColor: '#fff', borderRadius: '36px' }}
-          >
-            <Image
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              src={Family}
-              width={300}
-              height={300}
-              alt="Picture of the author"
-            />
-            <div
-              className="absolute"
-              style={{
-                bottom: '-20px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-              }}
-            >
-              <button
-                className="px-12 py-2.5 border rounded-3xl transition duration-400 transform-gpu hover:-translate-y-1 hover:shadow-lg text-white text-sm font-normal"
+          <div>
+            <div className="flex gap-2 items-center w-full mb-3">
+              <Image
+                className="mr-4"
                 style={{
-                  backgroundImage:
-                    'linear-gradient(90deg,#9b26b6 0,#b52cd5 50%,#9b26b6)',
+                  width: '22%',
+                  height: 'auto',
+                  textAlign: 'center',
                 }}
-              >
-                Xem thêm
-              </button>
-            </div>
-          </div>
-          <div className="mt-7 max-w-sm">
-            <p className="text-center mb-2 font-semibold text-lg">
-              1. Đây là KIDPOD
-            </p>
-            <p className="text-center text-lg font-light">
-              Hộp kể chuyện kết nối internet phát chuyện kể, bài hát.
-            </p>
-          </div>
-        </div>
+                src={Family}
+                alt="Picture of the author"
+              />
 
-        <div>
-          <div
-            className="relative h-96 w-96"
-            style={{ backgroundColor: '#fff', borderRadius: '36px' }}
-          >
-            <Image
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              src={Family}
-              width={300}
-              height={300}
-              alt="Picture of the author"
-            />
-            <div
-              className="absolute"
-              style={{
-                bottom: '-20px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-              }}
-            >
-              <button
-                className="px-12 py-2.5 border rounded-3xl transition duration-400 transform-gpu hover:-translate-y-1 hover:shadow-lg text-white text-sm font-normal"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(90deg,#9b26b6 0,#b52cd5 50%,#9b26b6)',
-                }}
+              <p
+                className="text-base font-normal text-justify"
+                style={{ width: '70%' }}
               >
-                Xem thêm
-              </button>
+                Vài tháng trước, trong khi hầu hết các bé khác đã thuộc “làu
+                làu” mặt chữ
+              </p>
             </div>
-          </div>
-          <div className="mt-7 max-w-sm">
-            <p className="text-center mb-2 font-semibold text-lg">
-              1. Đây là KIDPOD
-            </p>
-            <p className="text-center text-lg font-light">
-              Hộp kể chuyện kết nối internet phát chuyện kể, bài hát.
-            </p>
-          </div>
-        </div>
 
-        <div>
-          <div
-            className="relative h-96 w-96"
-            style={{ backgroundColor: '#fff', borderRadius: '36px' }}
-          >
-            <Image
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-              }}
-              src={Family}
-              width={300}
-              height={300}
-              alt="Picture of the author"
-            />
-            <div
-              className="absolute"
-              style={{
-                bottom: '-20px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-              }}
-            >
-              <button
-                className="px-12 py-2.5 border rounded-3xl transition duration-400 transform-gpu hover:-translate-y-1 hover:shadow-lg text-white text-sm font-normal"
+            <div className="flex gap-2 items-center w-full mb-3">
+              <Image
+                className="mr-4"
                 style={{
-                  backgroundImage:
-                    'linear-gradient(90deg,#9b26b6 0,#b52cd5 50%,#9b26b6)',
+                  width: '22%',
+                  height: 'auto',
+                  textAlign: 'center',
                 }}
+                src={Family}
+                alt="Picture of the author"
+              />
+
+              <p
+                className="text-base font-normal text-justify"
+                style={{ width: '70%' }}
               >
-                Xem thêm
-              </button>
+                Vài tháng trước, trong khi hầu hết các bé khác đã thuộc “làu
+                làu” mặt chữ
+              </p>
             </div>
-          </div>
-          <div className="mt-7 max-w-sm">
-            <p className="text-center mb-2 font-semibold text-lg">
-              1. Đây là KIDPOD
-            </p>
-            <p className="text-center text-lg font-light">
-              Hộp kể chuyện kết nối internet phát chuyện kể, bài hát.
-            </p>
+
+            <div className="flex gap-2 items-center w-full mb-3">
+              <Image
+                className="mr-4"
+                style={{
+                  width: '22%',
+                  height: 'auto',
+                  textAlign: 'center',
+                }}
+                src={Family}
+                alt="Picture of the author"
+              />
+
+              <p
+                className="text-base font-normal text-justify"
+                style={{ width: '70%' }}
+              >
+                Vài tháng trước, trong khi hầu hết các bé khác đã thuộc “làu
+                làu” mặt chữ
+              </p>
+            </div>
+
+            <div className="flex gap-2 items-center w-full mb-3">
+              <Image
+                className="mr-4"
+                style={{
+                  width: '22%',
+                  height: 'auto',
+                  textAlign: 'center',
+                }}
+                src={Family}
+                alt="Picture of the author"
+              />
+
+              <p
+                className="text-base font-normal text-justify"
+                style={{ width: '70%' }}
+              >
+                Vài tháng trước, trong khi hầu hết các bé khác đã thuộc “làu
+                làu” mặt chữ
+              </p>
+            </div>
+
+            <div className="flex gap-2 items-center w-full">
+              <Image
+                className="mr-4"
+                style={{
+                  width: '22%',
+                  height: 'auto',
+                  textAlign: 'center',
+                }}
+                src={Family}
+                alt="Picture of the author"
+              />
+
+              <p
+                className="text-base font-normal text-justify"
+                style={{ width: '70%' }}
+              >
+                Vài tháng trước, trong khi hầu hết các bé khác đã thuộc “làu
+                làu” mặt chữ
+              </p>
+            </div>
           </div>
         </div>
       </div>
