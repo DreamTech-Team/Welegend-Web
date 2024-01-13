@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Carousel } from 'antd';
 import { chunk } from 'lodash';
 import { useRef, useState } from 'react';
-import { CardInfo } from './CardInfo';
+import { CardInfo } from './cards';
 
 export function Buildings() {
   const [listItems, setListItems] = useState([
