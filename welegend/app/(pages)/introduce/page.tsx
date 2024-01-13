@@ -3,12 +3,12 @@
 import { background_image } from '~/app/_externals/assets/introduce';
 import {
   BannerHeader,
+  Buildings,
   Lectures,
   Thanks,
   TruthStory,
   ValueCompany,
 } from './_components';
-import { Buildings } from './_components/Buildings';
 
 export default function IntroducePage() {
   return (
