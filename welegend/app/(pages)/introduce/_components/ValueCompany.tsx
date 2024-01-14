@@ -7,7 +7,7 @@ import {
   wave,
   whale_image,
 } from '~/app/_externals/assets/introduce';
-import { ValueInfo } from './ValueInfo';
+import { ValueInfo } from './cards';
 
 const benefits = [1, 2, 3, 4];
 
