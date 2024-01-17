@@ -3,6 +3,7 @@
 import { background_image } from '~/app/_externals/assets/introduce';
 import {
   BannerHeader,
+  Buildings,
   Lectures,
   Thanks,
   TruthStory,
@@ -23,6 +24,7 @@ export default function IntroducePage() {
         <TruthStory />
         <Lectures />
         <ValueCompany />
+        <Buildings />
       </div>
     </div>
   );

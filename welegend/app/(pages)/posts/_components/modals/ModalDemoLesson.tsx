@@ -33,7 +33,7 @@ const listAnswers: Answer[] = [
 
 export default function ModalDemoLesson({ closeModal }: ModalDemoLessonProps) {
   return (
-    <div className="fixed inset-0 z-[1000] bg-black bg-opacity-70 flex flex-col items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex flex-col items-center justify-center">
       <button onClick={closeModal} className="absolute right-[25px] top-[25px]">
         <FontAwesomeIcon icon={faClose} size="2x" color="#FFFF" />
       </button>

@@ -1,10 +1,9 @@
 import Image, { StaticImageData } from 'next/image';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import Right50by50 from '~/app/../app/_externals/assets/stories/ic_right_1.svg';
 import IDCard from '~/app/../app/_externals/assets/stories/ic_right_2.svg';
 import Star from '~/app/../app/_externals/assets/stories/ic_right_3.svg';
-import RightRepresent from '~/app/../app/_externals/assets/stories/ic_story_gift.gif';
+import RightRepresent from '~/app/../app/_externals/assets/stories/img_right.png';
 
 interface ExclusiveRight {
   image: StaticImageData;
@@ -55,16 +54,12 @@ export default function ExclusiveRights() {
             </div>
           ))}
         </div>
-        <div className="hidden h-full px-20 flex-col md:flex lg:flex xl:flex 2xl:flex justify-between items-center">
+        <div className="hidden md:flex lg:flex xl:flex 2xl:flex justify-center items-center">
           <Image
             src={RightRepresent}
             alt="Right Represent"
-            className="w-full self-center"
+            className="w-1/2 self-center"
           />
-          <button className="px-3 py-3 min-w-[226px] mx-3 mt-3 bg-blue-400 rounded-[5px] border border-blue-400 text-white text-[13px] font-semibold transition duration-300 hover:bg-sky-500 hover:text-white bg-gradient-to-r from-blue-500 to-purple-500 transform-gpu hover:-translate-y-1 hover:shadow-lg">
-            Đăng ký Combo 4 Sản phẩm
-            <FontAwesomeIcon icon={faChevronRight} className="ml-4" />
-          </button>
         </div>
       </div>
     </div>

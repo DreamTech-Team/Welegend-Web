@@ -4,19 +4,18 @@ export function BannerHeader() {
   return (
     <div>
       <div
-        className="bg-no-repeat bg-cover bg-center"
+        className="bg-no-repeat bg-cover bg-center "
         style={{
           backgroundImage: `url(${banner_intro.src})`,
-          height: '26rem',
         }}
       >
-        <div className="w-full h-full bg-black bg-opacity-50 flex items-center px-28 gap-20">
+        <div className="w-full h-full bg-black bg-opacity-50 block lg:flex items-center px-14 md:py-28 md:px-28 py-10 gap-20 ">
           <div>
-            <h1 className="w-full text-white text-[25px] font-bold sm:text-[25px] md:text-[34px] lg:text-[34px] xl:text-[34px] 2xl:text-[34px]">
+            <h1 className="w-full text-white text-[18px] font-bold sm:text-[25px] md:text-[34px] lg:text-[34px] xl:text-[34px] 2xl:text-[34px]">
               Welegend - Ứng Dụng Từ Trái Tim Đến Trái Tim
             </h1>
           </div>
-          <div className="sm:w-4/5 md:w-4/5 lg:w-4/5 xl:w-4/5 2xl:w-4/5 rounded-[20px] relative">
+          <div className="hidden sm:block mt-10 lg:m-0 md:w-[100%] md:h-[15rem] lg:w-[900px] lg:h-[20rem] 2xl:w-[1000px] rounded-[20px] relative">
             <video
               width="100%"
               className="w-full h-full rounded-[20px] relative z-10"

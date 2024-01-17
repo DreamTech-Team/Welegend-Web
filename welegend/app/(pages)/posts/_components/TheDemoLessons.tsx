@@ -55,7 +55,7 @@ export default function DemoLessons() {
         {demoLessonLists.map((item: DemoLesson, index) => (
           <div
             key={index}
-            className="flex px-4 py-6 max-w-[419px] bg-white rounded-[40px] mx-4 mb-5 shadow-lg"
+            className="flex px-4 py-6 max-w-[419px] bg-white rounded-[40px] mx-4 mb-5"
           >
             <div className="pick_banner-stories mr-4">
               <Image
