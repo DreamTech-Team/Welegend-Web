@@ -1,7 +1,7 @@
 import {
   faFacebook,
   faGooglePlus,
-  faLinkedinIn,
+  faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -48,7 +48,7 @@ export function CardInfo() {
         <li>
           <a href="#" title="Twitter">
             <FontAwesomeIcon
-              className="md:text-[20px] "
+              className="md:text-[22px] "
               icon={faTwitter}
               color="#1C96E8"
             />
@@ -57,7 +57,7 @@ export function CardInfo() {
         <li>
           <a href="#" title="Facebook">
             <FontAwesomeIcon
-              className="md:text-[20px] "
+              className="md:text-[22px] "
               icon={faFacebook}
               color="#1773EA"
             />
@@ -66,7 +66,7 @@ export function CardInfo() {
         <li>
           <a href="#" title="Google">
             <FontAwesomeIcon
-              className="md:text-[20px] "
+              className="md:text-[22px] "
               icon={faGooglePlus}
               color="#D54C3F"
             />
@@ -75,8 +75,8 @@ export function CardInfo() {
         <li>
           <a href="#" title="Linkedin">
             <FontAwesomeIcon
-              className="md:text-[20px] "
-              icon={faLinkedinIn}
+              className="md:text-[22px] "
+              icon={faLinkedin}
               color="#007AB5"
             />
           </a>
