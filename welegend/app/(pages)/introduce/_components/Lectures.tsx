@@ -33,11 +33,11 @@ export function Lectures() {
       if (window.matchMedia('(max-width: 730px)').matches) {
         setNumChunks(1);
       } else if (window.matchMedia('(max-width: 1024px)').matches) {
-        setNumChunks(2);
+        setNumChunks(1);
       } else if (window.matchMedia('(max-width: 1280px)').matches) {
-        setNumChunks(3);
+        setNumChunks(2);
       } else {
-        setNumChunks(4);
+        setNumChunks(3);
       }
     };
 
@@ -71,7 +71,7 @@ export function Lectures() {
         <Carousel ref={carouselRef} autoplay>
           {chunk(listItems, numChunks).map((items, index) => (
             <div key={index}>
-              <div className="flex flex-wrap justify-center gap-[2%]">
+              <div className="flex flex-wrap justify-center gap-16">
                 {items.map((item) => (
                   <CardInfo key={item} />
                 ))}

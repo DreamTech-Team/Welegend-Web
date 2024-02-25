@@ -1,41 +1,28 @@
-import {
-  faFacebook,
-  faGooglePlus,
-  faLinkedin,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card } from 'antd';
 import Image from 'next/image';
 import { profile_image } from '~/app/_externals/assets/introduce';
+
+import {
+    faFacebook, faGooglePlus, faLinkedin, faTwitter
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export function CardInfo() {
   return (
     <Card
       hoverable
-<<<<<<< HEAD:welegend/app/(pages)/introduce/_components/cards/CardInfo.tsx
-      style={{ width: 250, margin: '10px' }}
+      style={{ margin: '10px' }}
+      className="h-auto w-72"
       cover={
-        <Image
-          src={profile_image.src}
-          width={250}
-          height={250}
-=======
-      style={{
-        width: 270,
-        margin: '10px',
-        // padding: '0 10px',
-        borderTopLeftRadius: '5rem',
-      }}
-      cover={
-        <Image
-          src={profile_image.src}
-          width={300}
-          height={300}
-          style={{ borderEndEndRadius: '4rem', borderTopLeftRadius: '5rem' }}
->>>>>>> 5921b8f (BL: fix card leacture and card buildings):welegend/app/(pages)/introduce/_components/cards/LectureInfo.tsx
-          alt="no image"
-        />
+        <div className="h-[18rem] w-[14rem] md:h-[26rem] md:w-[20rem]">
+          <Image
+            className=" h-[100%] w-[100%]"
+            src={profile_image.src}
+            width={250}
+            height={250}
+            alt="no image"
+          />
+        </div>
       }
     >
       <div className="text-center">
