@@ -1,12 +1,10 @@
-import {
-  faChevronLeft,
-  faChevronRight,
-  faPenRuler,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Carousel } from 'antd';
 import { chunk } from 'lodash';
 import { useEffect, useRef, useState } from 'react';
+
+import { faChevronLeft, faChevronRight, faPenRuler } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { CardInfo } from './cards';
 
 export function Lectures() {
@@ -55,10 +53,10 @@ export function Lectures() {
   return (
     <div className="my-32 ">
       <div className="text-center py-12 ">
-        <h1 className="w-full font-bold text-[#151515] sm:text-[25px] md:text-[34px]">
+        <h1 className="w-full font-bold text-neutral-900 sm:text-[25px] md:text-[34px]">
           Đội Ngũ Giảng Viên - Nghiên Cứu Viên
         </h1>
-        <p className=" text-[#969595] m-5 sm:text-[18px] md:text-[20px] uppercase font-medium">
+        <p className=" text-neutral-400 m-5 sm:text-[18px] md:text-[20px] uppercase font-medium">
           Welegend
         </p>
         <div className="relative">
@@ -67,7 +65,7 @@ export function Lectures() {
             icon={faPenRuler}
             size="lg"
           />
-          <div className="absolute z-0 top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%] w-[200px] h-[2px] border border-[#969595] border-dashed"></div>
+          <div className="absolute z-0 top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%] w-[200px] h-[2px] border border-neutral-400 border-dashed"></div>
         </div>
       </div>
       <div className="relative">
