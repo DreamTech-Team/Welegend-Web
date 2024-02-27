@@ -1,19 +1,20 @@
-import React from 'react';
-import { Inter } from 'next/font/google';
-
 import '~/app/globals.css';
-
-import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-config.autoAddCss = false;
 
 import { ConfigProvider } from 'antd';
-import StyledComponentsRegistry from '~/app/_externals/lib/AntdRegistry';
+import { Inter } from 'next/font/google';
+import React from 'react';
 import theme from '~/app/_externals/constants/theme.constant';
-
+import StyledComponentsRegistry from '~/app/_externals/lib/AntdRegistry';
 import cn from '~/app/_externals/utils/classes.merge';
-import Navbar from './_externals/components/Navbar';
+
+import { config } from '@fortawesome/fontawesome-svg-core';
+
 import Footer from './_externals/components/Footer';
+import Navbar from './_externals/components/Navbar';
+import { PopupMessage } from './_externals/components/popup-mesage/PopupMessage';
+
+config.autoAddCss = false;
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,6 +29,7 @@ const RootLayout = ({ children }: React.PropsWithChildren) => (
       <StyledComponentsRegistry>
         <Navbar />
         <ConfigProvider theme={theme}>{children}</ConfigProvider>
+        <PopupMessage />
         <Footer />
       </StyledComponentsRegistry>
     </body>
