@@ -13,7 +13,7 @@ export default function StoriesPage() {
     <div className="bg-cyan-50">
       <BannerHeader />
       <div
-        className="w-screen h-max inset-0 bg-contain bg-repeat-y"
+        className="w-full h-max inset-0 bg-contain bg-repeat-y"
         style={{
           backgroundImage: `url(${MainBackground.src})`,
         }}
