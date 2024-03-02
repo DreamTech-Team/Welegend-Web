@@ -47,6 +47,7 @@ const config: Config = {
         ripple1: 'move 12s linear infinite',
         ripple2: 'move 8s linear infinite',
         ripple3: 'move 6s linear infinite',
+        'slide-infinite': 'move-boat 17s linear infinite both',
       },
       keyframes: {
         float: {
@@ -57,9 +58,16 @@ const config: Config = {
           '0%': { backgroundPosition: 'left 0px bottom 0' },
           '100%': { backgroundPosition: 'left 500px bottom 0' },
         },
+        'move-boat': {
+          '0%': { transform: 'translateX(-15%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('tailwindcss-animated'),],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwindcss-animated'),
+  ],
 };
 export default config;

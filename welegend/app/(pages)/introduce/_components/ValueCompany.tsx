@@ -1,5 +1,3 @@
-import { faPenRuler } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import {
   children_image,
@@ -7,6 +5,10 @@ import {
   wave,
   whale_image,
 } from '~/app/_externals/assets/introduce';
+
+import { faPenRuler } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { ValueInfo } from './cards';
 
 const benefits = [1, 2, 3, 4];
@@ -14,13 +16,17 @@ const benefits = [1, 2, 3, 4];
 export function ValueCompany() {
   return (
     <div className="w-screen h-max">
-      <Image
-        className="animate-undulate ml-[120px] mb-[-45px]"
-        src={whale_image.src}
-        width={180}
-        height={100}
-        alt="no image"
-      />
+      <div className="w-screen mb-[-45px]">
+        <div className="w-full animate-slide-infinite mb-[-45px]">
+          <Image
+            // className="animate-undulate ml-[120px] mb-[-45px]"
+            src={whale_image.src}
+            width={180}
+            height={100}
+            alt="no image"
+          />
+        </div>
+      </div>
       <div className="relative">
         <div
           className="animate-ripple1 opacity-30 w-full h-[36px] block absolute bg-repeat-x"
