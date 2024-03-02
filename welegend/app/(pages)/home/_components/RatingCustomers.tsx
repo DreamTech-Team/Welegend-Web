@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import MottoImg from '../../../_externals/assets/home/motto.jpg';
 import RightRepresent from '~/app/../app/_externals/assets/stories/img_right.png';
+import Mascot1 from '~/app/_externals/assets/home/mascot/image 1.png'
+import Mascot2 from '~/app/_externals/assets/home/mascot/image 2.png'
+import Mascot3 from '~/app/_externals/assets/home/mascot/image 3.png'
+import Mascot4 from '~/app/_externals/assets/home/mascot/image 4.png'
+import Mascot5 from '~/app/_externals/assets/home/mascot/image 9.png'
 
 interface Rating {
   image: StaticImageData;
@@ -38,25 +43,67 @@ const dataRating: Rating[] = [
   },
 ];
 
+
 const RatingCustomers = () => {
+  const getRandomDisplayTime = () => {
+    return Math.floor(Math.random() * (5000 - 2000 + 1) + 1000);
+  };
+  const mascots : Mascot[] = useMemo(
+    () => [
+      { src: Mascot1, displayTime: getRandomDisplayTime() },
+      { src: Mascot2, displayTime: getRandomDisplayTime() },
+      { src: Mascot3, displayTime: getRandomDisplayTime() },
+      { src: Mascot4, displayTime: getRandomDisplayTime() },
+      { src: Mascot5, displayTime: getRandomDisplayTime() },
+    ],
+    []
+  );
+  const [currentImageIndexes, setCurrentImageIndexes] = useState(
+    mascots.map(() => 0)
+  );
+
+  useEffect(() => {
+    const intervals = mascots.map((mascot, index) => {
+      return setInterval(() => {
+        setCurrentImageIndexes((prevIndexes) => {
+          const randomIncrement = Math.floor(Math.random() * 5) + 1;
+          const newIndexes = [...prevIndexes];
+          newIndexes[index] = (prevIndexes[index] + randomIncrement) % mascots.length;
+          return newIndexes;
+        });
+      }, mascot.displayTime);
+    });
+
+    return () => intervals.forEach(clearInterval);
+  }, [mascots]);
+
+
+
   return (
     <div className="w-full flex flex-col items-center relative bg-w pt-12 pb-28">
       <h2 className="text-neutral-600 lg:text-2xl text-xl text-center px-5 font-extrabold mb-10">
         Đọc những gì khách hàng của chúng tôi nói
       </h2>
-      {/* <div className="flex items-center justify-center w-[100px] h-[10s0px]">
-        <Image
-          src={RightRepresent}
-          alt={'Ảnh'}
-          width={100}
-          className="h-auto self-center lg:w-[100px] md:w-[70px] w-[50px]"
-        />
-      </div> */}
-      <div className="w-full h-full flex justify-center items-center px-14 lg:flex-nowrap flex-wrap">
+      <div className="flex items-center justify-center w-full h-[150px] relative overflow-hidden">
+        <div className="absolute flex w-full h-full lg:gap-32 justify-center">
+          {mascots.map((mascot , index ) => (
+            <Image
+              key={index}
+              src={mascot.src}
+              alt={'Ảnh'}
+              width={100}
+              className={`h-auto self-center lg:w-[100px] md:w-[70px] w-[50px] transform transition-transform ${
+                index === currentImageIndexes[index] ? 'translate-y-0' : 'translate-y-full'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+      <div className={`w-full h-full flex justify-center px-14 lg:flex-nowrap flex-wrap`}>
         {dataRating.map((item, index) => (
           <div
             key={index}
-            className={`w-full h-full lg:min-h-[555px] flex flex-col justify-around items-center md:p-10 p-5 rounded-md ${item.backgroud}`}
+            className={`w-full h-full lg:min-h-[555px] flex flex-col justify-around items-center md:p-10 p-5 rounded-md ${item.backgroud} ${index !== 1 ? 'mt-10':''}`}
           >
             <p
               className={`${
