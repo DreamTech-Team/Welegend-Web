@@ -47,6 +47,12 @@ const RatingCustomers = () => {
   const getRandomDisplayTime = () => {
     return Math.floor(Math.random() * (5000 - 2000 + 1) + 1000);
   };
+
+  interface Mascot {
+    src: StaticImageData;
+    displayTime: number;
+  }
+
   const mascots: Mascot[] = useMemo(
     () => [
       { src: Mascot1, displayTime: getRandomDisplayTime() },
