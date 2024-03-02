@@ -9,15 +9,12 @@ import StyledComponentsRegistry from '~/app/_externals/lib/AntdRegistry';
 import cn from '~/app/_externals/utils/classes.merge';
 import Navbar from './_externals/components/Navbar';
 import Footer from './_externals/components/Footer';
-
-import { config } from '@fortawesome/fontawesome-svg-core';
-
-import Footer from './_externals/components/Footer';
-import Navbar from './_externals/components/Navbar';
 import { PopupMessage } from './_externals/components/popup-mesage/PopupMessage';
 
-import SideBar from './_externals/components/SideBar';
 import HeaderAdmin from './_externals/components/HeaderAdmin';
+import SideBar from './_externals/components/SideBar';
+
+import { config } from '@fortawesome/fontawesome-svg-core';
 
 config.autoAddCss = false;
 
@@ -28,7 +25,7 @@ export const metadata = {
   description: 'Welegend was created by dreamtech',
 };
 
-const role = 'admin' || 'user';
+const role = 'user' || 'admin';
 
 const RootLayout = ({ children }: React.PropsWithChildren) => (
   <html lang="en">

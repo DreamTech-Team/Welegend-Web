@@ -1,5 +1,5 @@
-import { Button } from 'antd';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return <>Hello World</>;
+export default async function Home() {
+  redirect('/home');
 }

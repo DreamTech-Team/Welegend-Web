@@ -42,8 +42,8 @@ const Mottov2 = () => {
             <div className="grow flex flex-col items-center h-[40%] lg:h-[100%] md:pt-[30px] pt-[20px]">
               <div className="py-[10px] md:px-[20px] px-[5px] w-[100%] md:rounded-2xl rounded-md bg-sky-100 mt-10">
                 <p className="text-center md:text-xl text-[12px] font-medium">
-                  Hơn <span className="text-[#08C] font-semibold">2000</span>{' '}
-                  bài học bổ ích
+                  Hơn <b className="text-[#08C] font-semibold">2000</b> bài học
+                  bổ ích
                 </p>
               </div>
               <p className="text-center mt-[30px] font-semibold md:text-[18px] text-[12px]">
