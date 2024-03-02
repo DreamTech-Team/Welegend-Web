@@ -11,7 +11,6 @@ export function Lectures() {
   const [listItems, setListItems] = useState([
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
   ]);
-
   const [numChunks, setNumChunks] = useState(4);
 
   const carouselRef = useRef<any>(null);

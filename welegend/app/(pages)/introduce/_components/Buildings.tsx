@@ -1,10 +1,14 @@
 import { chunk } from 'lodash';
 import { useRef, useState } from 'react';
+<<<<<<< HEAD
+import { CardInfo } from './cards';
+=======
 
 import { faPenRuler } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { PersonInfo } from './person-info';
+>>>>>>> develop
 
 export function Buildings() {
   return (
