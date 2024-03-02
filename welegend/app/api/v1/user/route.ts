@@ -3,14 +3,18 @@ import { NextRequest } from 'next/server';
 import APIRouter from '~/app/api/_externals/api.handler';
 import cloudinary from '../../_externals/cloudinary';
 import { UploadApiResponse } from 'cloudinary';
+import prisma from '~/app/_externals/lib/prisma';
 
 const APIHandler = new APIRouter();
 const router = APIHandler.route();
 
 // example get api
-router.get((req) => {
+router.get(async (req) => {
+  const data = await prisma.blog.findMany()
+
   return Response.json({
     message: 'Hello World!',
+    data
   });
 });
 
