@@ -5,7 +5,7 @@ import colors from './color.constant';
 // ant design theme config
 const theme: ThemeConfig = {
   token: {
-    fontFamily: 'Inter',
+    fontFamily: `Montserrat, sans-serif`,
     fontSize: 16,
     colorPrimary: colors.primary,
   },
