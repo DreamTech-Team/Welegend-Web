@@ -7,6 +7,8 @@ import React from 'react';
 import theme from '~/app/_externals/constants/theme.constant';
 import StyledComponentsRegistry from '~/app/_externals/lib/AntdRegistry';
 import cn from '~/app/_externals/utils/classes.merge';
+import Navbar from './_externals/components/Navbar';
+import Footer from './_externals/components/Footer';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 

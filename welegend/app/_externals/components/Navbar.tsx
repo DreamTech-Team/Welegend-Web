@@ -62,7 +62,7 @@ export default function Navbar() {
         className="flex h-[75px] bg-white items-center justify-between py-4 px-6 shadow relative"
       >
         <div className="flex">
-          <h1 className="logo_text logo_text_gradient text-3xl font-normal">
+          <h1 className="logo_text logo_text_gradient text-3xl fo nt-normal">
             WE
           </h1>
           <h1 className="logo_text text-sky-600 text-3xl font-normal">
