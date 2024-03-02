@@ -89,7 +89,7 @@ export default function Slider() {
   };
 
   return (
-    <div className="relative w-full h-[70vh] lg:h-[90vh]">
+    <div className="relative w-[100vw] h-[70vh] lg:h-[90vh]">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -127,7 +127,7 @@ export default function Slider() {
       >
         {slides.map((item, idx) => (
           <SwiperSlide key={idx}>
-            <div className="lg:w-full md:w-full sm:f-full h-full">
+            <div className="lg:w-[100vw] md:w-full sm:f-full h-full flex items-center justify-center overflow-hidden">
               <Image
                 src={item.image}
                 alt=""
@@ -135,7 +135,7 @@ export default function Slider() {
                 className="rounded-md object-cover"
                 style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
-              {/* <div className="w-full h-full">
+              {/* <div className="w-full h-full ">
                 <ReactPlayer
                   url={item.video}
                   controls
