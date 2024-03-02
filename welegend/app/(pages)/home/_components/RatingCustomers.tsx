@@ -16,11 +16,6 @@ interface Rating {
   colorText: string;
 }
 
-interface Mascot {
-  src: StaticImageData;
-  displayTime: number;
-}
-
 const dataRating: Rating[] = [
   {
     image: MottoImg,
