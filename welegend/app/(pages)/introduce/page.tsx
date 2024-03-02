@@ -1,14 +1,8 @@
 'use client';
 
 import { background_image } from '~/app/_externals/assets/introduce';
-import {
-  BannerHeader,
-  Lectures,
-  Thanks,
-  TruthStory,
-  ValueCompany,
-} from './_components';
-import { Buildings } from './_components/Buildings';
+
+import { BannerHeader, Buildings, Lectures, Thanks, TruthStory, ValueCompany } from './_components';
 
 export default function IntroducePage() {
   return (
