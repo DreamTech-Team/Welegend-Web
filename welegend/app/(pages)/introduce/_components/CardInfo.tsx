@@ -1,3 +1,7 @@
+import { Card } from 'antd';
+import Image from 'next/image';
+import { profile_image } from '~/app/_externals/assets/introduce';
+
 import {
   faFacebook,
   faGooglePlus,
@@ -5,9 +9,6 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Card } from 'antd';
-import Image from 'next/image';
-import { profile_image } from '~/app/_externals/assets/introduce';
 
 export function CardInfo() {
   return (

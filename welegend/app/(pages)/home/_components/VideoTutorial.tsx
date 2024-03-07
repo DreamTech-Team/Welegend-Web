@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
-import ReactPlayer from 'react-player';
+import dynamic from 'next/dynamic';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import CatDog from '../../../_externals/assets/home/CatDog.jpeg';
@@ -34,6 +34,10 @@ const prominentStoryLists: ProminentStory[] = [
 ];
 
 function VideoTutorial() {
+  const ReactPlayer = dynamic(() => import('react-player/lazy'), {
+    ssr: false,
+  });
+
   const videoPath =
     'https://firebasestorage.googleapis.com/v0/b/wncuploadimage.appspot.com/o/images%2Fproduction-id-4496268-1080p_JNroVrxy.mp4?alt=media&token=01052c9d-39d4-40d1-9c01-c7ec3f18cbcb';
   return (
