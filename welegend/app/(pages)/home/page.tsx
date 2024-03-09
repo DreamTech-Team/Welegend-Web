@@ -23,8 +23,8 @@ export default function HomePage() {
           backgroundImage: `url(${MainBackground.src})`,
         }}
       >
-        {/* <ProminentStory /> */}
-        {/* <Motto /> */}
+        <ProminentStory />
+        <Motto />
         <Mottov2 />
         <VideoHighlight />
         <VideoTutorial />

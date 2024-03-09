@@ -7,6 +7,31 @@ import {
   faBars,
 } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+
+interface NavbarItem {
+  label: string;
+  path: string;
+}
+
+const listNavbarItems: NavbarItem[] = [
+  {
+    label: 'Trang Chủ',
+    path: '/',
+  },
+  {
+    label: 'Giới thiệu',
+    path: '/introduce',
+  },
+  {
+    label: 'Câu chuyện',
+    path: '/stories',
+  },
+  {
+    label: 'Blog',
+    path: '/blogs',
+  },
+];
 
 export default function Navbar() {
   const [isOpenFind, setOpenFind] = useState(false);
@@ -56,13 +81,13 @@ export default function Navbar() {
   };
 
   return (
-    <div className="sticky top-0 z-999">
+    <div className="sticky top-0 z-40">
       <div
         ref={divRef}
         className="flex h-[75px] bg-white items-center justify-between py-4 px-6 shadow relative"
       >
         <div className="flex">
-          <h1 className="logo_text logo_text_gradient text-3xl font-normal">
+          <h1 className="logo_text logo_text_gradient text-3xl fo nt-normal">
             WE
           </h1>
           <h1 className="logo_text text-sky-600 text-3xl font-normal">
@@ -90,42 +115,19 @@ export default function Navbar() {
             </div>
           ) : (
             <>
-              <button
-                onClick={() => setActiveIndex(0)}
-                className="mr-[3.5%] hover:text-sky-600"
-                style={{
-                  color: indexActive == 0 ? '#078FD2' : '#000',
-                }}
-              >
-                Trang chủ
-              </button>
-              <button
-                onClick={() => setActiveIndex(1)}
-                className="mr-[3.5%] hover:text-sky-600"
-                style={{
-                  color: indexActive == 1 ? '#078FD2' : '#000',
-                }}
-              >
-                Giới thiệu
-              </button>
-              <button
-                onClick={() => setActiveIndex(2)}
-                className="mr-[3.5%] hover:text-sky-600"
-                style={{
-                  color: indexActive == 2 ? '#078FD2' : '#000',
-                }}
-              >
-                Câu chuyện
-              </button>
-              <button
-                onClick={() => setActiveIndex(3)}
-                className="mr-[3%] hover:text-sky-600"
-                style={{
-                  color: indexActive == 3 ? '#078FD2' : '#000',
-                }}
-              >
-                Blog
-              </button>
+              {listNavbarItems.map((item: NavbarItem, index: number) => (
+                <Link
+                  key={index}
+                  href={item.path}
+                  onClick={() => setActiveIndex(index)}
+                  className="mr-[3.5%] hover:text-sky-600"
+                  style={{
+                    color: indexActive == index ? '#078FD2' : '#000',
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
               <button onClick={handleChangeFindInputState}>
                 <FontAwesomeIcon
                   icon={faMagnifyingGlass}

@@ -1,9 +1,6 @@
 import Image from 'next/image';
 import {
-  children_image,
-  childrenbg_image,
-  wave,
-  whale_image,
+    children_image, childrenbg_image, wave, whale_image
 } from '~/app/_externals/assets/introduce';
 
 import { faPenRuler } from '@fortawesome/free-solid-svg-icons';
