@@ -7,12 +7,35 @@ datasource db {
   url      = env("POSTGRES_URL")
 }
 
+enum UserRole {
+  ADMIN
+  PARENT
+  CHILDREN
+}
+
+model User {
+  id          String        @id @default(uuid())
+  name        String
+  email       String        @unique
+  password    String
+  phone       String?       @default("")
+  image       String?       @default("")
+  address     String?
+  role        UserRole      @default(PARENT)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  birthdate   DateTime?
+  gender      String        @default("Male")
+  blogs       Blog[]
+}
+
 model Blog {
-  id        Int      @id @default(autoincrement())
-  author    String
-  title     String
-  summary   String?
-  content   String
-  avatar    String?
-  create_at DateTime @default(now())
+  id          Int         @id @default(autoincrement())
+  title       String
+  summary     String?
+  content     String
+  thumbnail   String?
+  create_at   DateTime    @default(now())
+  author      User?@relation(fields:[authorId], references:[id])
+  authorId    String?
 }

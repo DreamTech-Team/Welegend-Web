@@ -8,7 +8,6 @@ import {
   faPenRuler,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { CardInfo } from './cards';
 
 export function Lectures() {
