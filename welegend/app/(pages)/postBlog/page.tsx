@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImages, faPlus, faRotate } from '@fortawesome/free-solid-svg-icons';
@@ -5,7 +7,8 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import DraggableItem from './../DraggableItem/DraggableItem';
+import DraggableItem from './_components/DraggableItem/DraggableItem';
+import Link from 'next/link';
 
 interface handleModal {
   onClose: () => void;
@@ -248,13 +251,15 @@ export default function ModalPostBlog({ onClose }: handleModal) {
           </div>
 
           <div className="flex justify-center py-6">
-            <button
-              type="button"
-              className="transition-colors duration-1000 ease-in-out text-white bg-gradient-to-r from-pink-300 via-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 font-medium rounded-lg text-sm px-10 py-2.5 text-center me-2 mb-2"
-              onClick={handleClose}
-            >
-              Hủy
-            </button>
+            <Link href="/blogs">
+              <button
+                type="button"
+                className="transition-colors duration-1000 ease-in-out text-white bg-gradient-to-r from-pink-300 via-pink-400 to-pink-500 hover:from-pink-500 hover:to-pink-600 font-medium rounded-lg text-sm px-10 py-2.5 text-center me-2 mb-2"
+                onClick={handleClose}
+              >
+                Hủy
+              </button>
+            </Link>
             <button
               type="button"
               className="transition-colors duration-1000 ease-in-out text-white bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 hover:from-blue-500 hover:to-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"

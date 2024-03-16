@@ -9,13 +9,8 @@ import Bg from '~/app/../app/_externals/assets/blogs/test.jpg';
 import Avatar from '~/app/../app/_externals/assets/blogs/avatar.webp';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faClose,
-  faPenToSquare,
-  faPlus,
-} from '@fortawesome/free-solid-svg-icons';
-import { faImages } from '@fortawesome/free-regular-svg-icons';
-import { ChangeEvent, useState } from 'react';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 import ModalPostBlog from './_components/ModalPostBlog/ModalPostBlog';
 
 interface Blogs {
@@ -175,13 +170,15 @@ export default function BlogPage() {
         </div>
         <p>Pagination đang kiếm cái component đẹp thêm vào</p>
 
-        <div
-          className="cursor-pointer flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white w-16 h-16 rounded-full fixed bottom-0 right-0 mr-2 mb-6 shadow-md"
-          style={{ display: showButton ? 'flex' : 'none' }}
-          onClick={handleOpenModal}
-        >
-          <FontAwesomeIcon icon={faPenToSquare} className="text-lg" />
-        </div>
+        <Link href="/postBlog">
+          <div
+            className="cursor-pointer flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white w-16 h-16 rounded-full fixed bottom-10 right-10 mb-[72px] shadow-md"
+            style={{ display: showButton ? 'flex' : 'none' }}
+            onClick={handleOpenModal}
+          >
+            <FontAwesomeIcon icon={faPenToSquare} className="text-lg" />
+          </div>
+        </Link>
       </div>
 
       {openModal && <ModalPostBlog onClose={handleCloseModal} />}
