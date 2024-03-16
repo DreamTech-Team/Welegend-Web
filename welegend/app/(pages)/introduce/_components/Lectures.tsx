@@ -2,11 +2,7 @@ import { Button, Carousel } from 'antd';
 import { chunk } from 'lodash';
 import { useEffect, useRef, useState } from 'react';
 
-import {
-  faChevronLeft,
-  faChevronRight,
-  faPenRuler,
-} from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faPenRuler } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CardInfo } from './cards';
 
