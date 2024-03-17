@@ -7,14 +7,14 @@ import React from 'react';
 import theme from '~/app/_externals/constants/theme.constant';
 import StyledComponentsRegistry from '~/app/_externals/lib/AntdRegistry';
 import cn from '~/app/_externals/utils/classes.merge';
-import Navbar from '../_externals/components/Navbar';
-import Footer from '../_externals/components/Footer';
-import { PopupMessage } from '../_externals/components/popup-mesage/PopupMessage';
-
-import HeaderAdmin from '../_externals/components/HeaderAdmin';
-import SideBar from '../_externals/components/SideBar';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
+
+import Footer from '../_externals/components/Footer';
+import HeaderAdmin from '../_externals/components/HeaderAdmin';
+import Navbar from '../_externals/components/Navbar';
+import { PopupMessage } from '../_externals/components/popup-mesage/PopupMessage';
+import SideBar from '../_externals/components/SideBar';
 
 config.autoAddCss = false;
 
