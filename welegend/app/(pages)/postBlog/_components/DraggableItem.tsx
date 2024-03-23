@@ -1,5 +1,5 @@
+import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { useRef } from 'react';
 import {
   DragSourceMonitor,
   DropTargetMonitor,
@@ -17,11 +17,6 @@ interface DraggableItemProps {
   index: number;
   handleChoiceSection: (item: DataSection, index: number) => void;
   moveItem: (dragIndex: number, hoverIndex: number) => void;
-}
-
-interface DragItem {
-  type: string;
-  index: number;
 }
 
 const DraggableItem: React.FC<DraggableItemProps> = ({
@@ -55,6 +50,26 @@ const DraggableItem: React.FC<DraggableItemProps> = ({
 
   const ref = useRef<HTMLDivElement>(null);
   drag(drop(ref));
+
+  // Tự động cuộn màn hình tới vị trí của phần tử khi kéo
+  useEffect(() => {
+    if (isDragging && ref.current) {
+      const { top, bottom } = ref.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (top < 0) {
+        window.scrollTo({
+          top: window.scrollY + top,
+          behavior: 'smooth',
+        });
+      } else if (bottom > windowHeight) {
+        window.scrollTo({
+          top: window.scrollY + (bottom - windowHeight),
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [isDragging]);
 
   return (
     <div
