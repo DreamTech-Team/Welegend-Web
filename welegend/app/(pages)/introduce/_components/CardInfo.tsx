@@ -3,10 +3,7 @@ import Image from 'next/image';
 import { profile_image } from '~/app/_externals/assets/introduce';
 
 import {
-  faFacebook,
-  faGooglePlus,
-  faLinkedinIn,
-  faTwitter,
+    faFacebook, faGooglePlus, faLinkedinIn, faTwitter
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

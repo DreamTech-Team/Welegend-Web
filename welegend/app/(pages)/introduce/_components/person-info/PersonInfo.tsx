@@ -16,7 +16,7 @@ export function PersonInfo() {
       <h1 className="text-[14px] md:text-[20px] font-[600] leading-4 mt-5">
         Lalisa Manobal
       </h1>
-      <p className="m-0 text-[10px] md:text-[16px] font-[500] text-neutral-400 ">
+      <p className="m-0 text-[10px] md:text-[16px] font-[400] text-neutral-400 ">
         Rapper
       </p>
     </div>

@@ -17,7 +17,7 @@ export function PopupMessage() {
   };
 
   return (
-    <div className="">
+    <div className=" fixed top-0 z-[1000]">
       {open && (
         <div className="absolute w-screen h-screen top-0 left-0 opacity-40 bg-black z-998"></div>
       )}
