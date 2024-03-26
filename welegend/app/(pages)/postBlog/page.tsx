@@ -26,7 +26,7 @@ interface DataSection {
   image: string | null;
 }
 
-export default function ModalPostBlog({ onClose }: handleModal) {
+export default function ModalPostBlog({ onClose }: any) {
   const [checkHeight, setCheckHeight] = useState<boolean>(false);
   const [update, setUpdate] = useState<boolean>(false);
   const [content, setContent] = useState<string>('');
